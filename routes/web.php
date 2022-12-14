@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Route::middleware([
@@ -26,3 +26,6 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+//Route Hooks - Do not delete//
+	Route::view('categorias', 'livewire.categorias.index')->middleware('auth');
