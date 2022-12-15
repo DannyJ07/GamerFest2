@@ -14,7 +14,6 @@ class ModoFactory extends Factory
     {
         return [
 			'tipo' => $this->faker->name,
-			'id_juego' => $this->faker->name,
         ];
     }
 }

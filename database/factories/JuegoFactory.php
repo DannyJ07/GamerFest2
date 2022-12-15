@@ -18,6 +18,7 @@ class JuegoFactory extends Factory
 			'aula' => $this->faker->name,
 			'valor' => $this->faker->name,
 			'id_categoria' => $this->faker->name,
+			'id_modo' => $this->faker->name,
         ];
     }
 }

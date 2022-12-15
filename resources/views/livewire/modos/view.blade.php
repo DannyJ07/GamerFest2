@@ -33,7 +33,6 @@
 							<tr> 
 								<td>#</td> 
 								<th>Tipo</th>
-								<th>Id Juego</th>
 								<td>ACTIONS</td>
 							</tr>
 						</thead>
@@ -42,7 +41,6 @@
 							<tr>
 								<td>{{ $loop->iteration }}</td> 
 								<td>{{ $row->tipo }}</td>
-								<td>{{ $row->id_juego }}</td>
 								<td width="90">
 								<div class="btn-group">
 									<button type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -30,6 +30,10 @@
                 <label for="id_categoria"></label>
                 <input wire:model="id_categoria" type="text" class="form-control" id="id_categoria" placeholder="Id Categoria">@error('id_categoria') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
+            <div class="form-group">
+                <label for="id_modo"></label>
+                <input wire:model="id_modo" type="text" class="form-control" id="id_modo" placeholder="Id Modo">@error('id_modo') <span class="error text-danger">{{ $message }}</span> @enderror
+            </div>
 
                 </form>
             </div>

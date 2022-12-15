@@ -26,9 +26,9 @@ class Participante extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function inscripcionInds()
+    public function inscripcionis()
     {
-        return $this->hasMany('App\Models\InscripcionInd', 'id_participantes', 'id');
+        return $this->hasMany('App\Models\Inscripcioni', 'id_participantes', 'id');
     }
     
 }

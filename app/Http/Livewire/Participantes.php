@@ -53,7 +53,6 @@ class Participantes extends Component
 		'cedula' => 'required',
 		'correo' => 'required',
 		'telefono' => 'required',
-		'id_equipo' => 'required',
         ]);
 
         Participante::create([ 
@@ -93,7 +92,6 @@ class Participantes extends Component
 		'cedula' => 'required',
 		'correo' => 'required',
 		'telefono' => 'required',
-		'id_equipo' => 'required',
         ]);
 
         if ($this->selected_id) {

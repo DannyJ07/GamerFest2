@@ -11,7 +11,7 @@ class Juegos extends Component
     use WithPagination;
 
 	protected $paginationTheme = 'bootstrap';
-    public $selected_id, $keyWord, $nombre, $reglas, $aula, $valor, $id_categoria;
+    public $selected_id, $keyWord, $nombre, $reglas, $aula, $valor, $id_categoria, $id_modo;
     public $updateMode = false;
 
     public function render()
@@ -24,6 +24,7 @@ class Juegos extends Component
 						->orWhere('aula', 'LIKE', $keyWord)
 						->orWhere('valor', 'LIKE', $keyWord)
 						->orWhere('id_categoria', 'LIKE', $keyWord)
+						->orWhere('id_modo', 'LIKE', $keyWord)
 						->paginate(10),
         ]);
     }
@@ -41,6 +42,7 @@ class Juegos extends Component
 		$this->aula = null;
 		$this->valor = null;
 		$this->id_categoria = null;
+		$this->id_modo = null;
     }
 
     public function store()
@@ -51,6 +53,7 @@ class Juegos extends Component
 		'aula' => 'required',
 		'valor' => 'required',
 		'id_categoria' => 'required',
+		'id_modo' => 'required',
         ]);
 
         Juego::create([ 
@@ -58,7 +61,8 @@ class Juegos extends Component
 			'reglas' => $this-> reglas,
 			'aula' => $this-> aula,
 			'valor' => $this-> valor,
-			'id_categoria' => $this-> id_categoria
+			'id_categoria' => $this-> id_categoria,
+			'id_modo' => $this-> id_modo
         ]);
         
         $this->resetInput();
@@ -76,6 +80,7 @@ class Juegos extends Component
 		$this->aula = $record-> aula;
 		$this->valor = $record-> valor;
 		$this->id_categoria = $record-> id_categoria;
+		$this->id_modo = $record-> id_modo;
 		
         $this->updateMode = true;
     }
@@ -88,6 +93,7 @@ class Juegos extends Component
 		'aula' => 'required',
 		'valor' => 'required',
 		'id_categoria' => 'required',
+		'id_modo' => 'required',
         ]);
 
         if ($this->selected_id) {
@@ -97,7 +103,8 @@ class Juegos extends Component
 			'reglas' => $this-> reglas,
 			'aula' => $this-> aula,
 			'valor' => $this-> valor,
-			'id_categoria' => $this-> id_categoria
+			'id_categoria' => $this-> id_categoria,
+			'id_modo' => $this-> id_modo
             ]);
 
             $this->resetInput();

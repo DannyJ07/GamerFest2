@@ -13,14 +13,14 @@ class Modo extends Model
 
     protected $table = 'modos';
 
-    protected $fillable = ['tipo','id_juego'];
+    protected $fillable = ['tipo'];
 	
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function juego()
+    public function juegos()
     {
-        return $this->hasOne('App\Models\Juego', 'id', 'id_juego');
+        return $this->hasMany('App\Models\Juego', 'id_modo', 'id');
     }
     
 }

@@ -15,10 +15,6 @@
                 <label for="tipo"></label>
                 <input wire:model="tipo" type="text" class="form-control" id="tipo" placeholder="Tipo">@error('tipo') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
-            <div class="form-group">
-                <label for="id_juego"></label>
-                <input wire:model="id_juego" type="text" class="form-control" id="id_juego" placeholder="Id Juego">@error('id_juego') <span class="error text-danger">{{ $message }}</span> @enderror
-            </div>
 
                 </form>
             </div>

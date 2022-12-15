@@ -11,7 +11,7 @@ class Modos extends Component
     use WithPagination;
 
 	protected $paginationTheme = 'bootstrap';
-    public $selected_id, $keyWord, $tipo, $id_juego;
+    public $selected_id, $keyWord, $tipo;
     public $updateMode = false;
 
     public function render()
@@ -20,7 +20,6 @@ class Modos extends Component
         return view('livewire.modos.view', [
             'modos' => Modo::latest()
 						->orWhere('tipo', 'LIKE', $keyWord)
-						->orWhere('id_juego', 'LIKE', $keyWord)
 						->paginate(10),
         ]);
     }
@@ -34,19 +33,16 @@ class Modos extends Component
     private function resetInput()
     {		
 		$this->tipo = null;
-		$this->id_juego = null;
     }
 
     public function store()
     {
         $this->validate([
 		'tipo' => 'required',
-		'id_juego' => 'required',
         ]);
 
         Modo::create([ 
-			'tipo' => $this-> tipo,
-			'id_juego' => $this-> id_juego
+			'tipo' => $this-> tipo
         ]);
         
         $this->resetInput();
@@ -60,7 +56,6 @@ class Modos extends Component
 
         $this->selected_id = $id; 
 		$this->tipo = $record-> tipo;
-		$this->id_juego = $record-> id_juego;
 		
         $this->updateMode = true;
     }
@@ -69,14 +64,12 @@ class Modos extends Component
     {
         $this->validate([
 		'tipo' => 'required',
-		'id_juego' => 'required',
         ]);
 
         if ($this->selected_id) {
 			$record = Modo::find($this->selected_id);
             $record->update([ 
-			'tipo' => $this-> tipo,
-			'id_juego' => $this-> id_juego
+			'tipo' => $this-> tipo
             ]);
 
             $this->resetInput();

@@ -13,7 +13,7 @@ class Juego extends Model
 
     protected $table = 'juegos';
 
-    protected $fillable = ['nombre','reglas','aula','valor','id_categoria'];
+    protected $fillable = ['nombre','reglas','aula','valor','id_categoria','id_modo'];
 	
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
@@ -26,25 +26,25 @@ class Juego extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function inscripcionGrups()
+    public function inscripciongs()
     {
-        return $this->hasMany('App\Models\InscripcionGrup', 'id_juego', 'id');
+        return $this->hasMany('App\Models\Inscripciong', 'id_juego', 'id');
     }
     
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function inscripcionInds()
+    public function inscripcionis()
     {
-        return $this->hasMany('App\Models\InscripcionInd', 'id_juego', 'id');
+        return $this->hasMany('App\Models\Inscripcioni', 'id_juego', 'id');
     }
     
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
-    public function modos()
+    public function modo()
     {
-        return $this->hasMany('App\Models\Modo', 'id_juego', 'id');
+        return $this->hasOne('App\Models\Modo', 'id', 'id_modo');
     }
     
 }

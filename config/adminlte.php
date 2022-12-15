@@ -317,30 +317,45 @@ return [
         [
             'text' => 'Categorias',
             'url'  => '/categorias',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fas fa-fw fa-list',
         ],
         [
             'text' => 'Participantes',
             'url'  => '/participantes',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        [
+            'text' => 'Equipos',
+            'url'  => '/equipos',
+            'icon' => 'fas fa-fw fa-users',
+        ],
+        [
+            'text' => 'Modos',
+            'url'  => '/modos',
+            'icon' => 'fas fa-fw fa-',
+        ],
+        [
+            'text' => 'Tipo de pago',
+            'url'  => '/tipopgs',
+            'icon' => 'fas fa-fw fa-money',
+        ],
+        [
+            'text' => 'Inscripcion Ind',
+            'url'  => '/inscripcionis',
+            'icon' => 'fas fa-fw fa-edit',
+        ],
+        [
+            'text' => 'Inscripcion Grup',
+            'url'  => '/inscripciongs',
+            'icon' => 'fas fa-fw fa-edit',
+        ],
+        [
+            'text' => 'Juegos',
+            'url'  => '/juegos',
+            'icon' => 'fas fa-fw fa-gamepad',
         ],
 
-        ['header' => 'labels'],
-        [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
-        ],
+
     ],
 
     /*
