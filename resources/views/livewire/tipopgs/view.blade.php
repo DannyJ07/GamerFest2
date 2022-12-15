@@ -33,10 +33,6 @@
 							<tr> 
 								<td>#</td> 
 								<th>Tipo</th>
-								<th>Doc Pago</th>
-								<th>Total</th>
-								<th>Id Inscripcion Inds</th>
-								<th>Id Inscripcion Grups</th>
 								<td>ACTIONS</td>
 							</tr>
 						</thead>
@@ -45,10 +41,6 @@
 							<tr>
 								<td>{{ $loop->iteration }}</td> 
 								<td>{{ $row->tipo }}</td>
-								<td>{{ $row->doc_pago }}</td>
-								<td>{{ $row->total }}</td>
-								<td>{{ $row->id_inscripcion_inds }}</td>
-								<td>{{ $row->id_inscripcion_grups }}</td>
 								<td width="90">
 								<div class="btn-group">
 									<button type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

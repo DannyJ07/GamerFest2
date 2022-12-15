@@ -14,8 +14,11 @@ class InscripcioniFactory extends Factory
     {
         return [
 			'fecha' => $this->faker->name,
+			'total' => $this->faker->name,
 			'id_juego' => $this->faker->name,
 			'id_participantes' => $this->faker->name,
+			'id_pago' => $this->faker->name,
+			'doc_pago' => $this->faker->name,
         ];
     }
 }

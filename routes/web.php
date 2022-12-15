@@ -28,6 +28,7 @@ Route::middleware([
 });
 
 //Route Hooks - Do not delete//
+	Route::view('tipopgs', 'livewire.tipopgs.index')->middleware('auth');
 	Route::view('participantes', 'livewire.participantes.index')->middleware('auth');
 	Route::view('inscripcionis', 'livewire.inscripcionis.index')->middleware('auth');
 	Route::view('inscripciongs', 'livewire.inscripciongs.index')->middleware('auth');

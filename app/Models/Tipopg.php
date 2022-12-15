@@ -13,22 +13,22 @@ class Tipopg extends Model
 
     protected $table = 'tipopgs';
 
-    protected $fillable = ['tipo','doc_pago','total','id_inscripcion_inds','id_inscripcion_grups'];
+    protected $fillable = ['tipo'];
 	
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function inscripciong()
+    public function inscripciongs()
     {
-        return $this->hasOne('App\Models\Inscripciong', 'id', 'id_inscripcion_grups');
+        return $this->hasMany('App\Models\Inscripciong', 'id_pago', 'id');
     }
     
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function inscripcioni()
+    public function inscripcionis()
     {
-        return $this->hasOne('App\Models\Inscripcioni', 'id', 'id_inscripcion_inds');
+        return $this->hasMany('App\Models\Inscripcioni', 'id_pago', 'id');
     }
     
 }

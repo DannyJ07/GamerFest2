@@ -13,7 +13,7 @@ class Inscripcioni extends Model
 
     protected $table = 'inscripcionis';
 
-    protected $fillable = ['fecha','id_juego','id_participantes'];
+    protected $fillable = ['fecha','total','id_juego','id_participantes','id_pago','doc_pago'];
 	
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
@@ -32,11 +32,11 @@ class Inscripcioni extends Model
     }
     
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
-    public function tipoPagos()
+    public function tipopg()
     {
-        return $this->hasMany('App\Models\TipoPago', 'id_inscripcion_inds', 'id');
+        return $this->hasOne('App\Models\Tipopg', 'id', 'id_pago');
     }
     
 }

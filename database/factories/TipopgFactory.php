@@ -14,10 +14,6 @@ class TipopgFactory extends Factory
     {
         return [
 			'tipo' => $this->faker->name,
-			'doc_pago' => $this->faker->name,
-			'total' => $this->faker->name,
-			'id_inscripcion_inds' => $this->faker->name,
-			'id_inscripcion_grups' => $this->faker->name,
         ];
     }
 }

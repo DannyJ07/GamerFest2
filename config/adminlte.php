@@ -329,16 +329,7 @@ return [
             'url'  => '/equipos',
             'icon' => 'fas fa-fw fa-users',
         ],
-        [
-            'text' => 'Modos',
-            'url'  => '/modos',
-            'icon' => 'fas fa-fw fa-',
-        ],
-        [
-            'text' => 'Tipo de pago',
-            'url'  => '/tipopgs',
-            'icon' => 'fas fa-fw fa-money',
-        ],
+
         [
             'text' => 'Inscripcion Ind',
             'url'  => '/inscripcionis',

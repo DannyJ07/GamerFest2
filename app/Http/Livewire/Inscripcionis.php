@@ -11,7 +11,7 @@ class Inscripcionis extends Component
     use WithPagination;
 
 	protected $paginationTheme = 'bootstrap';
-    public $selected_id, $keyWord, $fecha, $id_juego, $id_participantes;
+    public $selected_id, $keyWord, $fecha, $total, $id_juego, $id_participantes, $id_pago, $doc_pago;
     public $updateMode = false;
 
     public function render()
@@ -20,8 +20,11 @@ class Inscripcionis extends Component
         return view('livewire.inscripcionis.view', [
             'inscripcionis' => Inscripcioni::latest()
 						->orWhere('fecha', 'LIKE', $keyWord)
+						->orWhere('total', 'LIKE', $keyWord)
 						->orWhere('id_juego', 'LIKE', $keyWord)
 						->orWhere('id_participantes', 'LIKE', $keyWord)
+						->orWhere('id_pago', 'LIKE', $keyWord)
+						->orWhere('doc_pago', 'LIKE', $keyWord)
 						->paginate(10),
         ]);
     }
@@ -35,22 +38,30 @@ class Inscripcionis extends Component
     private function resetInput()
     {		
 		$this->fecha = null;
+		$this->total = null;
 		$this->id_juego = null;
 		$this->id_participantes = null;
+		$this->id_pago = null;
+		$this->doc_pago = null;
     }
 
     public function store()
     {
         $this->validate([
 		'fecha' => 'required',
+		'total' => 'required',
 		'id_juego' => 'required',
 		'id_participantes' => 'required',
+		'id_pago' => 'required',
         ]);
 
         Inscripcioni::create([ 
 			'fecha' => $this-> fecha,
+			'total' => $this-> total,
 			'id_juego' => $this-> id_juego,
-			'id_participantes' => $this-> id_participantes
+			'id_participantes' => $this-> id_participantes,
+			'id_pago' => $this-> id_pago,
+			'doc_pago' => $this-> doc_pago
         ]);
         
         $this->resetInput();
@@ -64,8 +75,11 @@ class Inscripcionis extends Component
 
         $this->selected_id = $id; 
 		$this->fecha = $record-> fecha;
+		$this->total = $record-> total;
 		$this->id_juego = $record-> id_juego;
 		$this->id_participantes = $record-> id_participantes;
+		$this->id_pago = $record-> id_pago;
+		$this->doc_pago = $record-> doc_pago;
 		
         $this->updateMode = true;
     }
@@ -74,16 +88,21 @@ class Inscripcionis extends Component
     {
         $this->validate([
 		'fecha' => 'required',
+		'total' => 'required',
 		'id_juego' => 'required',
 		'id_participantes' => 'required',
+		'id_pago' => 'required',
         ]);
 
         if ($this->selected_id) {
 			$record = Inscripcioni::find($this->selected_id);
             $record->update([ 
 			'fecha' => $this-> fecha,
+			'total' => $this-> total,
 			'id_juego' => $this-> id_juego,
-			'id_participantes' => $this-> id_participantes
+			'id_participantes' => $this-> id_participantes,
+			'id_pago' => $this-> id_pago,
+			'doc_pago' => $this-> doc_pago
             ]);
 
             $this->resetInput();

@@ -33,8 +33,11 @@
 							<tr> 
 								<td>#</td> 
 								<th>Fecha</th>
+								<th>Total</th>
 								<th>Id Juego</th>
 								<th>Id Participantes</th>
+								<th>Id Pago</th>
+								<th>Doc Pago</th>
 								<td>ACTIONS</td>
 							</tr>
 						</thead>
@@ -43,8 +46,11 @@
 							<tr>
 								<td>{{ $loop->iteration }}</td> 
 								<td>{{ $row->fecha }}</td>
+								<td>{{ $row->total }}</td>
 								<td>{{ $row->id_juego }}</td>
 								<td>{{ $row->id_participantes }}</td>
+								<td>{{ $row->id_pago }}</td>
+								<td>{{ $row->doc_pago }}</td>
 								<td width="90">
 								<div class="btn-group">
 									<button type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
