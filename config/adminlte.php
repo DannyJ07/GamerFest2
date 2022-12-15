@@ -319,6 +319,11 @@ return [
             'url'  => '/categorias',
             'icon' => 'fas fa-fw fa-lock',
         ],
+        [
+            'text' => 'Participantes',
+            'url'  => '/participantes',
+            'icon' => 'fas fa-fw fa-lock',
+        ],
 
         ['header' => 'labels'],
         [
