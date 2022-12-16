@@ -5,6 +5,9 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\Inscripcioni;
+use App\Models\Juego;
+use App\Models\Participante;
+use App\Models\Tipopg;
 
 class Inscripcionis extends Component
 {
@@ -13,6 +16,7 @@ class Inscripcionis extends Component
 	protected $paginationTheme = 'bootstrap';
     public $selected_id, $keyWord, $fecha, $total, $id_juego, $id_participantes, $id_pago, $doc_pago;
     public $updateMode = false;
+    public $selectedJuego = null, $selectedParticipante = null, $selectedTipoPagos = null;
 
     public function render()
     {
@@ -26,9 +30,15 @@ class Inscripcionis extends Component
 						->orWhere('id_pago', 'LIKE', $keyWord)
 						->orWhere('doc_pago', 'LIKE', $keyWord)
 						->paginate(10),
-        ]);
+        'id_juego'=>Juego::all(),
+        'id_participantes'=>Participante::all(),
+        'id_pago'=>Tipopg::all()]);
     }
 	
+   
+    
+
+
     public function cancel()
     {
         $this->resetInput();
