@@ -18,8 +18,6 @@ return array(
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Livewire\\Categorias' => $baseDir . '/app/Http/Livewire/Categorias.php',
     'App\\Http\\Livewire\\Equipos' => $baseDir . '/app/Http/Livewire/Equipos.php',
-    'App\\Http\\Livewire\\InscripcionGrups' => $baseDir . '/app/Http/Livewire/InscripcionGrups.php',
-    'App\\Http\\Livewire\\InscripcionInds' => $baseDir . '/app/Http/Livewire/InscripcionInds.php',
     'App\\Http\\Livewire\\Inscripciongs' => $baseDir . '/app/Http/Livewire/Inscripciongs.php',
     'App\\Http\\Livewire\\Inscripcionis' => $baseDir . '/app/Http/Livewire/Inscripcionis.php',
     'App\\Http\\Livewire\\Juegos' => $baseDir . '/app/Http/Livewire/Juegos.php',

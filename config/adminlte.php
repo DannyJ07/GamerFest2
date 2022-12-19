@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => '',
+    'title' => 'GAMER FEST',
     'title_prefix' => 'GAMER FEST | ',
     'title_postfix' => '',
 
@@ -30,7 +30,7 @@ return [
     |
     */
 
-    'use_ico_only' => false,
+    'use_ico_only' => true,
     'use_full_favicon' => false,
 
     /*
@@ -130,11 +130,11 @@ return [
     */
 
     'usermenu_enabled' => true,
-    'usermenu_header' => false,
+    'usermenu_header' => true,
     'usermenu_header_class' => 'bg-primary',
-    'usermenu_image' => false,
-    'usermenu_desc' => false,
-    'usermenu_profile_url' => false,
+    'usermenu_image' => true,
+    'usermenu_desc' => true,
+    'usermenu_profile_url' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -150,8 +150,8 @@ return [
 
     'layout_topnav' => null,
     'layout_boxed' => null,
-    'layout_fixed_sidebar' => null,
-    'layout_fixed_navbar' => null,
+    'layout_fixed_sidebar' => true,
+    'layout_fixed_navbar' => true,
     'layout_fixed_footer' => null,
     'layout_dark_mode' => null,
 
@@ -166,13 +166,12 @@ return [
     | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Layout-and-Styling-Configuration
     |
     */
-
-    'classes_auth_card' => 'card-outline card-primary',
+    'classes_auth_card' => 'bg-gradient-dark',
     'classes_auth_header' => '',
-    'classes_auth_body' => '',
-    'classes_auth_footer' => '',
-    'classes_auth_icon' => '',
-    'classes_auth_btn' => 'btn-flat btn-primary',
+    'classes_auth_body' => 'bg-gradient-dark',
+    'classes_auth_footer' => 'text-center',
+    'classes_auth_icon' => 'fa-fw text-light',
+    'classes_auth_btn' => 'btn-flat btn-light',
 
     /*
     |--------------------------------------------------------------------------
@@ -331,15 +330,21 @@ return [
         ],
 
         [
-            'text' => 'Inscripcion Ind',
-            'url'  => '/inscripcionis',
-            'icon' => 'fas fa-fw fa-edit',
+            'text' => 'Inscripciones',
+            'submenu' => [
+                [
+                    'text' => 'Ins. Individuales',
+                    'url'  => '/inscripcionis',
+                ],
+                [
+                    'text' => 'Ins. Grupales',
+                    'url'  => '/inscripciongs',
+                    'icon' => 'fas fa-fw fa-edit',
+                ],
+
+            ]
         ],
-        [
-            'text' => 'Inscripcion Grup',
-            'url'  => '/inscripciongs',
-            'icon' => 'fas fa-fw fa-edit',
-        ],
+       
         [
             'text' => 'Juegos',
             'url'  => '/juegos',
