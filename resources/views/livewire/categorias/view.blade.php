@@ -31,7 +31,7 @@
 							<tr> 
 								<td>#</td> 
 								<th>Tipo</th>
-								<td>ACTIONS</td>
+								<td>Acciones</td>
 							</tr>
 						</thead>
 						<tbody>

@@ -335,6 +335,7 @@ return [
                 [
                     'text' => 'Ins. Individuales',
                     'url'  => '/inscripcionis',
+                    'icon' => 'fas fa-fw fa-edit',
                 ],
                 [
                     'text' => 'Ins. Grupales',
