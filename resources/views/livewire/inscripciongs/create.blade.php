@@ -3,7 +3,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="createDataModalLabel">Create New Inscripciong</h5>
+                <h5 class="modal-title" id="createDataModalLabel">Crear Nuevas Inscripciong</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                      <span aria-hidden="true close-btn">×</span>
                 </button>
@@ -22,8 +22,7 @@
                 <label for="id_juego"></label>
                 <!-- <input wire:model="id_juego" type="text" class="form-control" id="id_juego" placeholder="Id Juego">@error('id_juego') <span class="error text-danger">{{ $message }}</span> @enderror -->
                 <select class="form-control" wire:model="selectedJuego">
-                <option value="">seleccione un juego</option>
-                <option value="">seleccione un juego</option>   
+                <option value="">seleccione un juego</option> 
                         @foreach ($juegos as $juego)
                         <option value="{{$juego->id}}">{{ $juego->nombre}}</option>
                         @endforeach  
@@ -33,17 +32,20 @@
                 <label for="id_equipo"></label>
                 <!-- <input wire:model="id_equipo" type="text" class="form-control" id="id_equipo" placeholder="Id Equipo">@error('id_equipo') <span class="error text-danger">{{ $message }}</span> @enderror -->
                 <select class="form-control" wire:model="selectedEquipo">
-                <option value="">seleccione un Equipo</option>
+                <option value="">Seleccione un Equipo</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="id_pago"></label>
                 <!-- <input wire:model="id_pago" type="text" class="form-control" id="id_pago" placeholder="Id Pago">@error('id_pago') <span class="error text-danger">{{ $message }}</span> @enderror -->
                 <select class="form-control" wire:model="selectedTipoPagos">
+<<<<<<< HEAD
                 <option value="">seleccione un tipo de pago</option>
                         @foreach ($tipopgs as $tipopg)
                         <option value="{{$tipopg->id}}">{{ $tipopg->tipo}}</option>
                         @endforeach
+=======
+>>>>>>> aad332328f114ebbc2f749addeb523392e78b049
                 </select>
             </div>
             <div class="form-group">

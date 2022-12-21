@@ -36,39 +36,6 @@
 					@auth()
                     <ul class="navbar-nav mr-auto">
 						<!--Nav Bar Hooks - Do not delete!!-->
-						<li class="nav-item">
-                            <a href="{{ url('/tipopgs') }}" class="nav-link"><i class="fab fa-laravel text-info"></i> Tipopgs</a> 
-                        </li>
-						<li class="nav-item">
-                            <a href="{{ url('/inscripcionis') }}" class="nav-link"><i class="fab fa-laravel text-info"></i> Inscripcionis</a> 
-                        </li>
-						<li class="nav-item">
-                            <a href="{{ url('/inscripciongs') }}" class="nav-link"><i class="fab fa-laravel text-info"></i> Inscripciongs</a> 
-                        </li>
-						<li class="nav-item">
-                            <a href="{{ url('/tipo_pagos') }}" class="nav-link"><i class="fab fa-laravel text-info"></i> Tipo_pagos</a> 
-                        </li>
-						<li class="nav-item">
-                            <a href="{{ url('/inscripcion_inds') }}" class="nav-link"><i class="fab fa-laravel text-info"></i> Inscripcion_inds</a> 
-                        </li>
-						<li class="nav-item">
-                            <a href="{{ url('/inscripcion_grups') }}" class="nav-link"><i class="fab fa-laravel text-info"></i> Inscripcion_grups</a> 
-                        </li>
-						<li class="nav-item">
-                            <a href="{{ url('/participantes') }}" class="nav-link"><i class="fab fa-laravel text-info"></i> Participantes</a> 
-                        </li>
-						<li class="nav-item">
-                            <a href="{{ url('/equipos') }}" class="nav-link"><i class="fab fa-laravel text-info"></i> Equipos</a> 
-                        </li>
-						<li class="nav-item">
-                            <a href="{{ url('/modos') }}" class="nav-link"><i class="fab fa-laravel text-info"></i> Modos</a> 
-                        </li>
-						<li class="nav-item">
-                            <a href="{{ url('/juegos') }}" class="nav-link"><i class="fab fa-laravel text-info"></i> Juegos</a> 
-                        </li>
-						<li class="nav-item">
-                            <a href="{{ url('/categorias') }}" class="nav-link"><i class="fab fa-laravel text-info"></i> Categorias</a> 
-                        </li>
                     </ul>
 					@endauth()
 					

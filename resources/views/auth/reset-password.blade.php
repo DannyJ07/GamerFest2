@@ -1,3 +1,4 @@
+@extends('adminlte::auth.passwords.reset')
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">

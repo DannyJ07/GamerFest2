@@ -593,8 +593,6 @@ class ComposerStaticInitde7720a80b3c2ddbf996515bfec5dba3
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Livewire\\Categorias' => __DIR__ . '/../..' . '/app/Http/Livewire/Categorias.php',
         'App\\Http\\Livewire\\Equipos' => __DIR__ . '/../..' . '/app/Http/Livewire/Equipos.php',
-        'App\\Http\\Livewire\\InscripcionGrups' => __DIR__ . '/../..' . '/app/Http/Livewire/InscripcionGrups.php',
-        'App\\Http\\Livewire\\InscripcionInds' => __DIR__ . '/../..' . '/app/Http/Livewire/InscripcionInds.php',
         'App\\Http\\Livewire\\Inscripciongs' => __DIR__ . '/../..' . '/app/Http/Livewire/Inscripciongs.php',
         'App\\Http\\Livewire\\Inscripcionis' => __DIR__ . '/../..' . '/app/Http/Livewire/Inscripcionis.php',
         'App\\Http\\Livewire\\Juegos' => __DIR__ . '/../..' . '/app/Http/Livewire/Juegos.php',
