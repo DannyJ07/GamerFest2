@@ -16,7 +16,7 @@ class Inscripciongs extends Component
 	protected $paginationTheme = 'bootstrap';
     public $selected_id, $keyWord, $fecha, $total, $id_juego, $id_equipo, $id_pago, $doc_pago;
     public $updateMode = false;
-    public $selectedJuego = null, $selectedParticipante = null, $selectedTipoPagos = null;
+    public $selectedJuego = null, $selectedEquipo = null, $selectedTipoPagos = null;
 
     public function render()
     {

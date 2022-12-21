@@ -590,6 +590,7 @@ class ComposerStaticInitde7720a80b3c2ddbf996515bfec5dba3
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Livewire\\Categorias' => __DIR__ . '/../..' . '/app/Http/Livewire/Categorias.php',
         'App\\Http\\Livewire\\Equipos' => __DIR__ . '/../..' . '/app/Http/Livewire/Equipos.php',

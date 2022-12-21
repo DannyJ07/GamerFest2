@@ -12,7 +12,7 @@
 				<form>
             <div class="form-group">
                 <label for="fecha"></label>
-                <input wire:model="fecha" type="text" class="form-control" id="fecha" placeholder="Fecha">@error('fecha') <span class="error text-danger">{{ $message }}</span> @enderror
+                <input wire:model="fecha" type="date" class="form-control" id="fecha" placeholder="Fecha">@error('fecha') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
             <div class="form-group">
                 <label for="total"></label>
@@ -33,6 +33,9 @@
                 <!-- <input wire:model="id_equipo" type="text" class="form-control" id="id_equipo" placeholder="Id Equipo">@error('id_equipo') <span class="error text-danger">{{ $message }}</span> @enderror -->
                 <select class="form-control" wire:model="selectedEquipo">
                 <option value="">Seleccione un Equipo</option>
+                        @foreach ($equipos as $equipo)
+                        <option value="{{$equipo->id}}">{{ $equipo->nombre}}</option>
+                        @endforeach  
                 </select>
             </div>
             <div class="form-group">
