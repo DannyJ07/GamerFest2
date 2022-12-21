@@ -22,17 +22,21 @@ class Inscripcionis extends Component
     {
 		$keyWord = '%'.$this->keyWord .'%';
         return view('livewire.inscripcionis.view', [
-            'inscripcionis' => Inscripcioni::latest()
+            $juegos=Juego::all(),
+            $participantes=Participante::all(),
+            $tipopgs=Tipopg::all(),
+            'inscripcionis' => Inscripcioni::with('juego')->with('participante')->with('tipopg')
 						->orWhere('fecha', 'LIKE', $keyWord)
 						->orWhere('total', 'LIKE', $keyWord)
-						->orWhere('id_juego', 'LIKE', $keyWord)
-						->orWhere('id_participantes', 'LIKE', $keyWord)
-						->orWhere('id_pago', 'LIKE', $keyWord)
+						->whereHas('juego', fn($query)=>
+                        $query->where('nombre', 'LIKE', $keyWord))
+						->whereHas('participante', fn($query)=>
+                        $query->where('nombre','LIKE',$keyWord))
+						->whereHas('tipopg', fn($query)=>
+                        $query->where('tipo','LIKE',$keyWord))
 						->orWhere('doc_pago', 'LIKE', $keyWord)
 						->paginate(10),
-        'id_juego'=>Juego::all(),
-        'id_participantes'=>Participante::all(),
-        'id_pago'=>Tipopg::all()]);
+       ],compact('juegos','participantes','tipopgs'));
     }
 	
    

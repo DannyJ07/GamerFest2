@@ -5,6 +5,9 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\Inscripciong;
+use App\Models\Juego;
+use App\Models\Equipo;
+use App\Models\Tipopg;
 
 class Inscripciongs extends Component
 {
@@ -13,20 +16,27 @@ class Inscripciongs extends Component
 	protected $paginationTheme = 'bootstrap';
     public $selected_id, $keyWord, $fecha, $total, $id_juego, $id_equipo, $id_pago, $doc_pago;
     public $updateMode = false;
+    public $selectedJuego = null, $selectedParticipante = null, $selectedTipoPagos = null;
 
     public function render()
     {
 		$keyWord = '%'.$this->keyWord .'%';
         return view('livewire.inscripciongs.view', [
-            'inscripciongs' => Inscripciong::latest()
+            $juegos=Juego::all(),
+            $equipos=Equipo::all(),
+            $tipopgs=Tipopg::all(),
+            'inscripciongs' => Inscripciong::with('juego')->with('equipo')->with('tipopg')
 						->orWhere('fecha', 'LIKE', $keyWord)
 						->orWhere('total', 'LIKE', $keyWord)
-						->orWhere('id_juego', 'LIKE', $keyWord)
-						->orWhere('id_equipo', 'LIKE', $keyWord)
-						->orWhere('id_pago', 'LIKE', $keyWord)
+						->whereHas('juego', fn($query)=>
+                        $query->where('nombre', 'LIKE', $keyWord))
+						->whereHas('equipo', fn($query)=>
+                        $query->where('nombre','LIKE',$keyWord))
+						->whereHas('tipopg', fn($query)=>
+                        $query->where('tipo','LIKE',$keyWord))
 						->orWhere('doc_pago', 'LIKE', $keyWord)
 						->paginate(10),
-        ]);
+        ],compact('juegos','equipos','tipopgs'));
     }
 	
     public function cancel()
