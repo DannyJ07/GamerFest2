@@ -32,9 +32,9 @@
 								<td>#</td> 
 								<th>Fecha</th>
 								<th>Total</th>
-								<th>Id Juego</th>
-								<th>Id Equipo</th>
-								<th>Id Pago</th>
+								<th>Juego</th>
+								<th>Equipo</th>
+								<th>Tipo de Pago</th>
 								<th>Doc Pago</th>
 								<td>ACCIONES</td>
 							</tr>
