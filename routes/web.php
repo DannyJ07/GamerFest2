@@ -22,13 +22,12 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/dashboard', function () {
+    Route::get('/dashbgit pudoard', function () {
         return view('dashboard');
     })->name('dashboard');
 });
 
 //Route Hooks - Do not delete//
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 	Route::view('tipopgs', 'livewire.tipopgs.index')->middleware('auth');
 	Route::view('participantes', 'livewire.participantes.index')->middleware('auth');
 	Route::view('inscripcionis', 'livewire.inscripcionis.index')->middleware('auth');
@@ -38,7 +37,3 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 	Route::view('juegos', 'livewire.juegos.index')->middleware('auth');
 	Route::view('categorias', 'livewire.categorias.index')->middleware('auth');
     Route::view('tipopgs', 'livewire.tipopgs.index')->middleware('auth');
-
-
-
-

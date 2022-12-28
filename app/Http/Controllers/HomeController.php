@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Participant;
+use App\Models\Participante;
 use App\Models\Game;
 use App\Models\Inscriptionsin;
 
