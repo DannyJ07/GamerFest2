@@ -3,7 +3,7 @@
     <div class="modal-dialog" role="document">
        <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="updateModalLabel">Eliminar Equipo</h5>
+                <h5 class="modal-title" id="updateModalLabel">Update Equipo</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span wire:click.prevent="cancel()" aria-hidden="true">×</span>
                 </button>
@@ -15,12 +15,16 @@
                 <label for="nombre"></label>
                 <input wire:model="nombre" type="text" class="form-control" id="nombre" placeholder="Nombre">@error('nombre') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
+            <div class="form-group">
+                <label for="enjuego"></label>
+                <input wire:model="enjuego" type="text" class="form-control" id="enjuego" placeholder="Enjuego">@error('enjuego') <span class="error text-danger">{{ $message }}</span> @enderror
+            </div>
 
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" wire:click.prevent="cancel()" class="btn btn-secondary" data-dismiss="modal">Cerra</button>
-                <button type="button" wire:click.prevent="update()" class="btn btn-primary" data-dismiss="modal">Guardar</button>
+                <button type="button" wire:click.prevent="cancel()" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" wire:click.prevent="update()" class="btn btn-primary" data-dismiss="modal">Save</button>
             </div>
        </div>
     </div>

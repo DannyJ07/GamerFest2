@@ -3,7 +3,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="createDataModalLabel">Crear Nuevo Participante</h5>
+                <h5 class="modal-title" id="createDataModalLabel">Create New Participante</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                      <span aria-hidden="true close-btn">×</span>
                 </button>
@@ -29,6 +29,10 @@
             <div class="form-group">
                 <label for="telefono"></label>
                 <input wire:model="telefono" type="text" class="form-control" id="telefono" placeholder="Telefono">@error('telefono') <span class="error text-danger">{{ $message }}</span> @enderror
+            </div>
+            <div class="form-group">
+                <label for="enjuego"></label>
+                <input wire:model="enjuego" type="text" class="form-control" id="enjuego" placeholder="Enjuego">@error('enjuego') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
             <div class="form-group">
                 <label for="id_equipo"></label>

@@ -13,14 +13,14 @@ class Equipo extends Model
 
     protected $table = 'equipos';
 
-    protected $fillable = ['nombre'];
+    protected $fillable = ['nombre','enjuego'];
 	
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function inscripcionGrups()
+    public function inscripciongs()
     {
-        return $this->hasMany('App\Models\InscripcionGrup', 'id_equipo', 'id');
+        return $this->hasMany('App\Models\Inscripciong', 'id_equipo', 'id');
     }
     
     /**

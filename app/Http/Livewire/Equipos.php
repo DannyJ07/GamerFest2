@@ -11,7 +11,7 @@ class Equipos extends Component
     use WithPagination;
 
 	protected $paginationTheme = 'bootstrap';
-    public $selected_id, $keyWord, $nombre;
+    public $selected_id, $keyWord, $nombre, $enjuego;
     public $updateMode = false;
 
     public function render()
@@ -20,6 +20,7 @@ class Equipos extends Component
         return view('livewire.equipos.view', [
             'equipos' => Equipo::latest()
 						->orWhere('nombre', 'LIKE', $keyWord)
+						->orWhere('enjuego', 'LIKE', $keyWord)
 						->paginate(10),
         ]);
     }
@@ -33,16 +34,19 @@ class Equipos extends Component
     private function resetInput()
     {		
 		$this->nombre = null;
+		$this->enjuego = null;
     }
 
     public function store()
     {
         $this->validate([
 		'nombre' => 'required',
+		'enjuego' => 'required',
         ]);
 
         Equipo::create([ 
-			'nombre' => $this-> nombre
+			'nombre' => $this-> nombre,
+			'enjuego' => $this-> enjuego
         ]);
         
         $this->resetInput();
@@ -56,6 +60,7 @@ class Equipos extends Component
 
         $this->selected_id = $id; 
 		$this->nombre = $record-> nombre;
+		$this->enjuego = $record-> enjuego;
 		
         $this->updateMode = true;
     }
@@ -64,12 +69,14 @@ class Equipos extends Component
     {
         $this->validate([
 		'nombre' => 'required',
+		'enjuego' => 'required',
         ]);
 
         if ($this->selected_id) {
 			$record = Equipo::find($this->selected_id);
             $record->update([ 
-			'nombre' => $this-> nombre
+			'nombre' => $this-> nombre,
+			'enjuego' => $this-> enjuego
             ]);
 
             $this->resetInput();

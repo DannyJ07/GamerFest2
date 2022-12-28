@@ -14,6 +14,7 @@ class EquipoFactory extends Factory
     {
         return [
 			'nombre' => $this->faker->name,
+			'enjuego' => $this->faker->name,
         ];
     }
 }

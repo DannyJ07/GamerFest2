@@ -1,5 +1,4 @@
 @extends('adminlte::page')
-
 @section('content')
 <div class="container-fluid">
     <div class="row justify-content-center">
