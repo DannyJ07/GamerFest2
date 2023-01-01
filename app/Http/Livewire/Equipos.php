@@ -85,4 +85,22 @@ class Equipos extends Component
             $record->delete();
         }
     }
+
+    public function enpie($id)
+    {
+        
+    }
+
+    public function eliminados($id)
+    {
+        
+    }
+
+    public function antiguedad($id)
+    {
+
+
+    }
+
+    
 }

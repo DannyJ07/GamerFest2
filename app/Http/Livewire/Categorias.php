@@ -85,4 +85,34 @@ class Categorias extends Component
             $record->delete();
         }
     }
+    public function tendencias($id)
+    {
+        $record = Categoria::findOrFail($id);
+        $this->selected_id = $id; 
+		$this->tipo = $record-> tipo;
+        if ($this->tipo=="Aventura"){
+            $mensaje=("Los juegos mas populares de aventura son: GOW Ragnarok, Grounded, Spiderman PS4");
+        }
+        if ($this->nombre=="Deporte"){
+            $mensaje=("Los juegos mas populares de deporte son: Fallguys, Forza Horizon 5, Fifa");
+        }
+        if ($this->nombre=="Terror"){
+            $mensaje=("Los juegos mas populares de Terror son: Resident evil 8, Phasmofobia, DayZ,Dying Ligth");
+        }
+    }
+    public function relevancia($id)
+    {
+        $record = Categoria::findOrFail($id);
+        $this->selected_id = $id; 
+		$this->tipo = $record-> tipo;
+        if ($this->tipo=="Aventura"){
+            $mensaje=("El genero ha sido popular desde: 1980");
+        }
+        if ($this->nombre=="Deporte"){
+            $mensaje=("El genero ha sido popular desde: 1976");
+        }
+        if ($this->nombre=="Terror"){
+            $mensaje=("El genero ha sido popular desde: 1984");
+        }
+    }
 }

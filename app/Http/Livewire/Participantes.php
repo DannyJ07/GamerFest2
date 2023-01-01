@@ -118,4 +118,5 @@ class Participantes extends Component
             $record->delete();
         }
     }
+    
 }
