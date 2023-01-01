@@ -345,12 +345,24 @@ return [
 
             ]
         ],
-       
+
         [
             'text' => 'Juegos',
             'url'  => '/juegos',
             'icon' => 'fas fa-fw fa-gamepad',
         ],
+        [
+            'text' => 'Modos',
+            'url'  => '/modos',
+            'icon' => 'fas fa-fw fa-puzzle-piece',
+        ],
+        [
+            'text' => 'Tipo de pago',
+            'url'  => '/tipopgs',
+            'icon' => 'fas fa-fw fa-money-bill',
+        ],
+
+
 
 
     ],
