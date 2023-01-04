@@ -35,6 +35,16 @@ class Juegos extends Component
         $this->updateMode = false;
     }
 	
+    public function index()
+    {
+        return Juego::all();
+    }
+
+    public function listarJuego(Juegos $juego)
+    {
+        return $juego;
+    }
+
     private function resetInput()
     {		
 		$this->nombre = null;

@@ -25,6 +25,16 @@ class Equipos extends Component
         ]);
     }
 	
+    public function index()
+    {
+        return Equipo::all();
+    }
+
+    public function listarEquipo(Equipos $equipo)
+    {
+        return $equipo;
+    }
+
     public function cancel()
     {
         $this->resetInput();

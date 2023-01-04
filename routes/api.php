@@ -24,13 +24,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::apiResource(name: 'enpie', controller: Equipos::class);
+Route::apiResource(name: 'listarEquipo', controller: Equipos::class);
 Route::apiResource(name:'antiguedad',controller: Equipos::class);
-Route::apiResource(name:'Tips',controller: Juegos::class);
+Route::apiResource(name:'listarJuego',controller: Juegos::class);
 Route::apiResource(name:'CosasMeta',controller: Juegos::class);
 Route::apiResource(name:'JuegosSimilares',controller: Juegos::class);
 Route::apiResource(name:'CantidadJugadores',controller: Juegos::class);
 Route::apiResource(name:'tendencias',controller: Categorias::class);
 Route::apiResource(name:'relevancia',controller: Categorias::class);
 Route::apiResource(name:'pjrandom',controller: Inscripcionis::class);
-Route::apiResource(name:'enpie',controller: Participantes::class);
+Route::apiResource(name:'listarParticipantes',controller: Participantes::class);
