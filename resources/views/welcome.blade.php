@@ -9,7 +9,7 @@
     </head>
     <body class="antialiased" style="font-family:'Nunito', sans-serif">
 
-    <header class="header" style="background-color: #ffb703; display: flex; align-items:center; heigth:85px; padding:5px; justify-content: flex-end">
+    <header class="header" style="background-color: #ffb703; display: flex; align-items:center; heigth:85px; justify-content: flex-end; width: 100%;">
         <h1 style="font-size: 35px; margin-right:auto; padding:0 20px;  ">GamerFest</h1>
 
         <h2 style="size: 16px;  display: flex; margin: 20px"><a href="#" style="color: #000000; text-decoration: none">Juegos</a></h2>
