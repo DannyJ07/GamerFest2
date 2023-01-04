@@ -93,19 +93,31 @@ class Equipos extends Component
         }
     }
 
-    public function enpie($id)
+    public function enpie(Request $request, $id)
     {
+        $record = Equipo::findOrFail($id);
+        $this->selected_id = $id; 
+		$this->nombre = $record-> nombre;
+		$this->enjuego = $record-> enjuego;
+        if($this->enjuego=="Si")
+        {
+            return \response(content:'El equipo aun esta en la competencia') ;
+        }
+
+        else{
+            return \response(content:'El equipo ya no  esta en la competencia') ;
+        }
         
     }
 
-    public function eliminados($id)
-    {
-        
-    }
 
     public function antiguedad($id)
     {
-
+        $record = Equipo::findOrFail($id);
+        $this->selected_id = $id; 
+		$this->nombre = $record-> nombre;
+		$this->created_at = $record-> created_at;
+        session()->flash('message', 'El juego es miembro desde el:',$record->created_at);
 
     }
 

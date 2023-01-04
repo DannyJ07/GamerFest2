@@ -126,4 +126,21 @@ class Participantes extends Component
         }
     }
     
+	public function enpie($id)
+    {
+        $record = Equipo::findOrFail($id);
+        $this->selected_id = $id; 
+		$this->nombre = $record-> nombre;
+		$this->enjuego = $record-> enjuego;
+        if($this->enjuego=="Si")
+        {
+            session()->flash('message', 'El equipo aun esta en la competencia');
+        }
+
+        else{
+            session()->flash('message', 'El equipo ya no esta en la competencia');
+        }
+        
+    }
+
 }
