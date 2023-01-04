@@ -157,7 +157,7 @@ class Inscripcionis extends Component
             $personaje=array("a"=>"Kelly","b"=>"Paloma","c"=>"Kla","d"=>"Maxim");
         }
         shuffle($personaje);
-        return $personaje[0];     
+        isset($_GET[$personaje[0]]);     
     }
 
 }

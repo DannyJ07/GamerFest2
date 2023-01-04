@@ -145,7 +145,7 @@ class Juegos extends Component
             $mensaje=array("a"=>"Siempre ten 2 cartas anti aereas en tu mazo ","b"=>"A veces es mas valioso perder una torre y no gastar elixir para usarlo mas adelante","c"=>"pon una carta de mayor coste de elixir desde tu torre central para que hasta que llegue a la mitad hayas recuperado su coste y mandar refuerzos");
         }
         shuffle($mensaje);
-        return $mensaje[0];  
+        isset($_GET[$mensaje[0]]);;  
     }
     public function CosasMeta($id)
     {
@@ -170,7 +170,7 @@ class Juegos extends Component
         if ($this->nombre=="FREE FIRE"){
             $mensaje=("lo meta actualmente es: mazo 1, mazo 2 , mazo 3");
         }
-        return $mensaje;  
+        isset($_GET[$mensaje]);  
     }
 
     public function JuegosSimilares($id)
@@ -197,7 +197,7 @@ class Juegos extends Component
             $mensaje=array("a"=>"Pubg","b"=>"Fortnite","c"=>"Call of duty");
         }
         shuffle($mensaje);
-        return $mensaje[0];  
+        return isset($_GET[$mensaje[0]]);
     }
 
     public function CantidadJugadores($id)
@@ -223,7 +223,7 @@ class Juegos extends Component
         if ($this->nombre=="FREE FIRE"){
             $mensaje=("La cantidad de jugadores actuales es: 2696875");
         }
-        return $mensaje;  
+        isset($_GET[$mensaje]);  
     }
     
 }

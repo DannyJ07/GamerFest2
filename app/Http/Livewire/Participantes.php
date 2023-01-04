@@ -134,11 +134,11 @@ class Participantes extends Component
 		$this->enjuego = $record-> enjuego;
         if($this->enjuego=="Si")
         {
-            session()->flash('message', 'El equipo aun esta en la competencia');
+            session()->flash('message', 'El equipo', isset($_GET[$record->nombre]),'aun esta en la competencia') ;
         }
 
         else{
-            session()->flash('message', 'El equipo ya no esta en la competencia');
+            session()->flash('message', 'El equipo ', isset($_GET[$record->nombre]),'ya no  esta en la competencia') ;
         }
         
     }

@@ -101,11 +101,11 @@ class Equipos extends Component
 		$this->enjuego = $record-> enjuego;
         if($this->enjuego=="Si")
         {
-            return \response(content:'El equipo aun esta en la competencia') ;
+            session()->flash('message', 'El equipo', isset($_GET[$record->nombre]),'aun esta en la competencia') ;
         }
 
         else{
-            return \response(content:'El equipo ya no  esta en la competencia') ;
+            session()->flash('message', 'El equipo ', isset($_GET[$record->nombre]),'ya no  esta en la competencia') ;
         }
         
     }
@@ -117,8 +117,7 @@ class Equipos extends Component
         $this->selected_id = $id; 
 		$this->nombre = $record-> nombre;
 		$this->created_at = $record-> created_at;
-        session()->flash('message', 'El juego es miembro desde el:',$record->created_at);
-
+        session()->flash('message', 'El juego es miembro desde el:', isset($_POST[$record->created_at]));
     }
 
     

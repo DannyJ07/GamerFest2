@@ -99,6 +99,7 @@ class Categorias extends Component
         if ($this->nombre=="Terror"){
             $mensaje=("Los juegos mas populares de Terror son: Resident evil 8, Phasmofobia, DayZ,Dying Ligth");
         }
+        isset($_GET[$mensaje]);
     }
     public function relevancia($id)
     {
@@ -114,5 +115,6 @@ class Categorias extends Component
         if ($this->nombre=="Terror"){
             $mensaje=("El genero ha sido popular desde: 1984");
         }
+        isset($_GET[$mensaje]);
     }
 }
