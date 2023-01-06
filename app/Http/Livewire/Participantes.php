@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\Participante;
+use App\Models\Equipo;
 
 class Participantes extends Component
 {
@@ -18,15 +19,17 @@ class Participantes extends Component
     {
 		$keyWord = '%'.$this->keyWord .'%';
         return view('livewire.participantes.view', [
-            'participantes' => Participante::latest()
+            $equipos=Equipo::all(),
+            'participantes' => Participante::with('equipo')
 						->orWhere('nombre', 'LIKE', $keyWord)
 						->orWhere('apellido', 'LIKE', $keyWord)
 						->orWhere('cedula', 'LIKE', $keyWord)
 						->orWhere('correo', 'LIKE', $keyWord)
 						->orWhere('telefono', 'LIKE', $keyWord)
-						->orWhere('id_equipo', 'LIKE', $keyWord)
+						->whereHas('equipo', fn($query)=>
+                        $query->where('nombre', 'LIKE', $keyWord))
 						->paginate(10),
-        ]);
+        ],compact('equipos'));
     }
 
     public function index()

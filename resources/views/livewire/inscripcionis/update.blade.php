@@ -21,15 +21,30 @@
             </div>
             <div class="form-group">
                 <label for="id_juego"></label>
-                <input wire:model="id_juego" type="text" class="form-control" id="id_juego" placeholder="Id Juego">@error('id_juego') <span class="error text-danger">{{ $message }}</span> @enderror
+                <select class="form-control" wire:model="id_juego">
+                <option value="">seleccione un juego</option>   
+                        @foreach ($juegos as $juego)
+                        <option value="{{$juego->id}}">{{ $juego->nombre}}</option>
+                        @endforeach           
+                </select>
             </div>
             <div class="form-group">
                 <label for="id_participantes"></label>
-                <input wire:model="id_participantes" type="text" class="form-control" id="id_participantes" placeholder="Id Participantes">@error('id_participantes') <span class="error text-danger">{{ $message }}</span> @enderror
+                <select class="form-control" wire:model="id_participantes">
+                <option value="">Seleccione un participante</option>
+                @foreach ($participantes as $participante)
+                        <option value="{{$participante->id}}">{{ $participante->nombre}}</option>
+                        @endforeach             
+                </select>
             </div>
             <div class="form-group">
                 <label for="id_pago"></label>
-                <input wire:model="id_pago" type="text" class="form-control" id="id_pago" placeholder="Id Pago">@error('id_pago') <span class="error text-danger">{{ $message }}</span> @enderror
+                <select class="form-control" wire:model="id_pago">
+                        <option value="">seleccione un tipo de pago</option> 
+                        @foreach ($tipopgs as $tipopg)
+                        <option value="{{$tipopg->id}}">{{ $tipopg->tipo}}</option>
+                        @endforeach         
+                </select>
             </div>
             <div class="form-group">
                 <label for="doc_pago"></label>

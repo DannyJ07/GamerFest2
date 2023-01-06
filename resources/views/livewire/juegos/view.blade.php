@@ -37,8 +37,8 @@
 								<th>Aula</th>
 								<th>Valor</th>
 								<th>Fecha Evento</th>
-								<th>Id Categoria</th>
-								<th>Id Modo</th>
+								<th>Categoria</th>
+								<th>Modo</th>
 								<td>ACTIONS</td>
 							</tr>
 						</thead>
@@ -51,8 +51,8 @@
 								<td>{{ $row->aula }}</td>
 								<td>{{ $row->valor }}</td>
 								<td>{{ $row->fecha_evento }}</td>
-								<td>{{ $row->id_categoria }}</td>
-								<td>{{ $row->id_modo }}</td>
+								<td>{{ $row->categoria->tipo }}</td>
+								<td>{{ $row->modo->tipo }}</td>
 								<td width="90">
 								<div class="btn-group">
 									<button type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
