@@ -26,6 +26,16 @@ class Productos extends Component
         ]);
     }
 	
+    public function index()
+    {
+        return Producto::all();
+    }
+	
+    public function listarProductos(Productos $producto)
+    {
+        return $producto;
+    }
+
     public function cancel()
     {
         $this->resetInput();

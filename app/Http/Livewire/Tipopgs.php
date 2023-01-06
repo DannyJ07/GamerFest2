@@ -23,6 +23,16 @@ class Tipopgs extends Component
 						->paginate(10),
         ]);
     }
+
+    public function index()
+    {
+        return Tipopg::all();
+    }
+	
+    public function listarTipopgs(Tipopgs $tipopg)
+    {
+        return $tipopg;
+    }
 	
     public function cancel()
     {

@@ -39,6 +39,16 @@ class Inscripciongs extends Component
         ],compact('juegos','equipos','tipopgs'));
     }
 	
+    public function index()
+    {
+        return Inscripciong::all();
+    }
+	
+    public function listarInscripciongs(Inscripciongs $inscripciong)
+    {
+        return $inscripciong;
+    }
+
     public function cancel()
     {
         $this->resetInput();

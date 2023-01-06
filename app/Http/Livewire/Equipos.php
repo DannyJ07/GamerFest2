@@ -23,6 +23,17 @@ class Equipos extends Component
 						->paginate(10),
         ]);
     }
+
+    public function index()
+    {
+        return Equipo::all();
+    }
+	
+    public function listarEquipo(Equipos $equipo)
+    {
+        return $equipo;
+    }
+
 	
     public function cancel()
     {

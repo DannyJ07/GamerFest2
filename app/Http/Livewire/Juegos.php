@@ -29,6 +29,17 @@ class Juegos extends Component
 						->paginate(10),
         ]);
     }
+
+	public function index()
+    {
+        return Juego::all();
+    }
+	
+    public function listarJuegos(Juegos $juego)
+    {
+        return $juego;
+    }
+
 	
     public function cancel()
     {

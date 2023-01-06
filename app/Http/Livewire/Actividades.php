@@ -28,6 +28,16 @@ class Actividades extends Component
         ]);
     }
 	
+    public function index()
+    {
+        return Actividade::all();
+    }
+	
+    public function listarActividades(Actividades $actividade)
+    {
+        return $actividade;
+    }
+
     public function cancel()
     {
         $this->resetInput();

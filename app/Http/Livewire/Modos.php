@@ -23,6 +23,16 @@ class Modos extends Component
 						->paginate(10),
         ]);
     }
+    
+    public function index()
+    {
+        return Modo::all();
+    }
+	
+    public function listarModos(Modos $modo)
+    {
+        return $modo;
+    }
 	
     public function cancel()
     {

@@ -23,7 +23,17 @@ class Categorias extends Component
 						->paginate(10),
         ]);
     }
+
+    public function index()
+    {
+        return Categoria::all();
+    }
 	
+    public function listarCategorias(Categorias $categoria)
+    {
+        return $categoria;
+    }
+
     public function cancel()
     {
         $this->resetInput();
