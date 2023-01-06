@@ -35,8 +35,14 @@
   }
   
   hr{
-    color: ffb703;
-    size: 6px;
+    color: #ffb703;
+    size: 7px;
+    background-color: #ffb703;
+  }
+
+  .hr{
+    color: #ffb703;
+    size: 7px;
     background-color: #ffb703;
   }
 
@@ -99,6 +105,16 @@
     background-color: #240046;
   }
 
+  .mas{
+    margin-left: 60em; 
+    font-size: 19px; 
+    background-color: #ffb703; 
+    border-radius: 20px; 
+    padding: 10px 25px; 
+    font-weight: bold; 
+    border-color: #ffb703;
+  }
+
   .log{
     background-color: #ffb703;
   }
@@ -108,4 +124,12 @@
     text-decoration: none; 
     margin: 20px;
     background: #240046;
+}
+
+.mass{
+  color: #000000; 
+  text-decoration: none; 
+  margin: 5px 25px;
+  border-color: #240046 3px;
+  background-color: #ffb703;
 }
