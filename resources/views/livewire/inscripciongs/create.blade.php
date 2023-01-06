@@ -21,7 +21,7 @@
             <div class="form-group">
                 <label for="id_juego"></label>
                 <!-- <input wire:model="id_juego" type="text" class="form-control" id="id_juego" placeholder="Id Juego">@error('id_juego') <span class="error text-danger">{{ $message }}</span> @enderror -->
-                <select class="form-control" wire:model="selectedJuego">
+                <select class="form-control" wire:model="id_juego">
                 <option value="">seleccione un juego</option> 
                         @foreach ($juegos as $juego)
                         <option value="{{$juego->id}}">{{ $juego->nombre}}</option>
@@ -31,7 +31,7 @@
             <div class="form-group">
                 <label for="id_equipo"></label>
                 <!-- <input wire:model="id_equipo" type="text" class="form-control" id="id_equipo" placeholder="Id Equipo">@error('id_equipo') <span class="error text-danger">{{ $message }}</span> @enderror -->
-                <select class="form-control" wire:model="selectedEquipo">
+                <select class="form-control" wire:model="id_equipo">
                 <option value="">Seleccione un Equipo</option>
                         @foreach ($equipos as $equipo)
                         <option value="{{$equipo->id}}">{{ $equipo->nombre}}</option>
@@ -41,20 +41,17 @@
             <div class="form-group">
                 <label for="id_pago"></label>
                 <!-- <input wire:model="id_pago" type="text" class="form-control" id="id_pago" placeholder="Id Pago">@error('id_pago') <span class="error text-danger">{{ $message }}</span> @enderror -->
-                <select class="form-control" wire:model="selectedTipoPagos">
-<<<<<<< HEAD
+                <select class="form-control" wire:model="id_pago">
                 <option value="">seleccione un tipo de pago</option>
                         @foreach ($tipopgs as $tipopg)
                         <option value="{{$tipopg->id}}">{{ $tipopg->tipo}}</option>
                         @endforeach
-=======
->>>>>>> aad332328f114ebbc2f749addeb523392e78b049
                 </select>
             </div>
             <div class="form-group">
                 <label for="doc_pago"></label>
                 <input wire:model="doc_pago" type="text" class="form-control" id="doc_pago" placeholder="Doc Pago">@error('doc_pago') <span class="error text-danger">{{ $message }}</span> @enderror
-            </div>
+            </div>            
 
                 </form>
             </div>
