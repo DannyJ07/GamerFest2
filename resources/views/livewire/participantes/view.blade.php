@@ -37,7 +37,7 @@
 								<th>Cedula</th>
 								<th>Correo</th>
 								<th>Telefono</th>
-								<th>Id Equipo</th>
+								<th>Equipo</th>
 								<td>ACTIONS</td>
 							</tr>
 						</thead>

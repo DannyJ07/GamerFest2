@@ -23,17 +23,6 @@ class Equipos extends Component
 						->paginate(10),
         ]);
     }
-
-    public function index()
-    {
-        return Equipo::all();
-    }
-	
-    public function listarEquipo(Equipos $equipo)
-    {
-        return $equipo;
-    }
-
 	
     public function cancel()
     {
@@ -49,7 +38,6 @@ class Equipos extends Component
     public function store()
     {
         $this->validate([
-		'nombre' => 'required',
         ]);
 
         Equipo::create([ 
@@ -74,7 +62,6 @@ class Equipos extends Component
     public function update()
     {
         $this->validate([
-		'nombre' => 'required',
         ]);
 
         if ($this->selected_id) {

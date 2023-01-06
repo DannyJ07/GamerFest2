@@ -45,9 +45,9 @@
 								<td>{{ $loop->iteration }}</td> 
 								<td>{{ $row->fecha }}</td>
 								<td>{{ $row->total }}</td>
-								<td>{{ $row->id_juego }}</td>
-								<td>{{ $row->id_equipo }}</td>
-								<td>{{ $row->id_pago }}</td>
+								<td>{{ $row->juego->nombre }}</td>
+								<td>{{ $row->equipo->nombre }}</td>
+								<td>{{ $row->tipopg->tipo }}</td>
 								<td>{{ $row->doc_pago }}</td>
 								<td width="90">
 								<div class="btn-group">
