@@ -121,7 +121,7 @@
                             </div>
                         </div><!-- /.card-body -->
                     </div>
-                    
+
                     <!-- TO DO List -->
                     <div class="card">
                         <div class="card-header">
@@ -130,127 +130,94 @@
                                 To Do List
                             </h3>
 
-                            <div class="card-tools">
-                                <ul class="pagination pagination-sm">
-                                    <li class="page-item"><a href="#" class="page-link">&laquo;</a></li>
-                                    <li class="page-item"><a href="#" class="page-link">1</a></li>
-                                    <li class="page-item"><a href="#" class="page-link">2</a></li>
-                                    <li class="page-item"><a href="#" class="page-link">3</a></li>
-                                    <li class="page-item"><a href="#" class="page-link">&raquo;</a></li>
-                                </ul>
-                            </div>
                         </div>
                         <!-- /.card-header -->
-                        <div class="card-body">
-                            <ul class="todo-list" data-widget="todo-list">
-                                <li>
-                                    <!-- drag handle -->
-                                    <span class="handle">
-                                        <i class="fas fa-ellipsis-v"></i>
-                                        <i class="fas fa-ellipsis-v"></i>
-                                    </span>
-                                    <!-- checkbox -->
-                                    <div class="icheck-primary d-inline ml-2">
-                                        <input type="checkbox" value="" name="todo1" id="todoCheck1">
-                                        <label for="todoCheck1"></label>
-                                    </div>
-                                    <!-- todo text -->
-                                    <span class="text">Design a nice theme</span>
-                                    <!-- Emphasis label -->
-                                    <small class="badge badge-danger"><i class="far fa-clock"></i> 2 mins</small>
-                                    <!-- General tools such as edit or delete-->
-                                    <div class="tools">
-                                        <i class="fas fa-edit"></i>
-                                        <i class="fas fa-trash-o"></i>
-                                    </div>
-                                </li>
-                                <li>
-                                    <span class="handle">
-                                        <i class="fas fa-ellipsis-v"></i>
-                                        <i class="fas fa-ellipsis-v"></i>
-                                    </span>
-                                    <div class="icheck-primary d-inline ml-2">
-                                        <input type="checkbox" value="" name="todo2" id="todoCheck2" checked>
-                                        <label for="todoCheck2"></label>
-                                    </div>
-                                    <span class="text">Make the theme responsive</span>
-                                    <small class="badge badge-info"><i class="far fa-clock"></i> 4 hours</small>
-                                    <div class="tools">
-                                        <i class="fas fa-edit"></i>
-                                        <i class="fas fa-trash-o"></i>
-                                    </div>
-                                </li>
-                                <li>
-                                    <span class="handle">
-                                        <i class="fas fa-ellipsis-v"></i>
-                                        <i class="fas fa-ellipsis-v"></i>
-                                    </span>
-                                    <div class="icheck-primary d-inline ml-2">
-                                        <input type="checkbox" value="" name="todo3" id="todoCheck3">
-                                        <label for="todoCheck3"></label>
-                                    </div>
-                                    <span class="text">Let theme shine like a star</span>
-                                    <small class="badge badge-warning"><i class="far fa-clock"></i> 1 day</small>
-                                    <div class="tools">
-                                        <i class="fas fa-edit"></i>
-                                        <i class="fas fa-trash-o"></i>
-                                    </div>
-                                </li>
-                                <li>
-                                    <span class="handle">
-                                        <i class="fas fa-ellipsis-v"></i>
-                                        <i class="fas fa-ellipsis-v"></i>
-                                    </span>
-                                    <div class="icheck-primary d-inline ml-2">
-                                        <input type="checkbox" value="" name="todo4" id="todoCheck4">
-                                        <label for="todoCheck4"></label>
-                                    </div>
-                                    <span class="text">Let theme shine like a star</span>
-                                    <small class="badge badge-success"><i class="far fa-clock"></i> 3 days</small>
-                                    <div class="tools">
-                                        <i class="fas fa-edit"></i>
-                                        <i class="fas fa-trash-o"></i>
-                                    </div>
-                                </li>
-                                <li>
-                                    <span class="handle">
-                                        <i class="fas fa-ellipsis-v"></i>
-                                        <i class="fas fa-ellipsis-v"></i>
-                                    </span>
-                                    <div class="icheck-primary d-inline ml-2">
-                                        <input type="checkbox" value="" name="todo5" id="todoCheck5">
-                                        <label for="todoCheck5"></label>
-                                    </div>
-                                    <span class="text">Check your messages and notifications</span>
-                                    <small class="badge badge-primary"><i class="far fa-clock"></i> 1 week</small>
-                                    <div class="tools">
-                                        <i class="fas fa-edit"></i>
-                                        <i class="fas fa-trash-o"></i>
-                                    </div>
-                                </li>
-                                <li>
-                                    <span class="handle">
-                                        <i class="fas fa-ellipsis-v"></i>
-                                        <i class="fas fa-ellipsis-v"></i>
-                                    </span>
-                                    <div class="icheck-primary d-inline ml-2">
-                                        <input type="checkbox" value="" name="todo6" id="todoCheck6">
-                                        <label for="todoCheck6"></label>
-                                    </div>
-                                    <span class="text">Let theme shine like a star</span>
-                                    <small class="badge badge-secondary"><i class="far fa-clock"></i> 1 month</small>
-                                    <div class="tools">
-                                        <i class="fas fa-edit"></i>
-                                        <i class="fas fa-trash-o"></i>
-                                    </div>
-                                </li>
-                            </ul>
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table m-0">
+                                    <thead>
+                                        <tr>
+                                            <th>Order ID</th>
+                                            <th>Item</th>
+                                            <th>Status</th>
+                                            <th>Popularity</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="pages/examples/invoice.html">OR9842</a></td>
+                                            <td>Call of Duty IV</td>
+                                            <td><span class="badge badge-success">Shipped</span></td>
+                                            <td>
+                                                <div class="sparkbar" data-color="#00a65a" data-height="20">
+                                                    90,80,90,-70,61,-83,63</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="pages/examples/invoice.html">OR1848</a></td>
+                                            <td>Samsung Smart TV</td>
+                                            <td><span class="badge badge-warning">Pending</span></td>
+                                            <td>
+                                                <div class="sparkbar" data-color="#f39c12" data-height="20">
+                                                    90,80,-90,70,61,-83,68</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="pages/examples/invoice.html">OR7429</a></td>
+                                            <td>iPhone 6 Plus</td>
+                                            <td><span class="badge badge-danger">Delivered</span></td>
+                                            <td>
+                                                <div class="sparkbar" data-color="#f56954" data-height="20">
+                                                    90,-80,90,70,-61,83,63</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="pages/examples/invoice.html">OR7429</a></td>
+                                            <td>Samsung Smart TV</td>
+                                            <td><span class="badge badge-info">Processing</span></td>
+                                            <td>
+                                                <div class="sparkbar" data-color="#00c0ef" data-height="20">
+                                                    90,80,-90,70,-61,83,63</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="pages/examples/invoice.html">OR1848</a></td>
+                                            <td>Samsung Smart TV</td>
+                                            <td><span class="badge badge-warning">Pending</span></td>
+                                            <td>
+                                                <div class="sparkbar" data-color="#f39c12" data-height="20">
+                                                    90,80,-90,70,61,-83,68</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="pages/examples/invoice.html">OR7429</a></td>
+                                            <td>iPhone 6 Plus</td>
+                                            <td><span class="badge badge-danger">Delivered</span></td>
+                                            <td>
+                                                <div class="sparkbar" data-color="#f56954" data-height="20">
+                                                    90,-80,90,70,-61,83,63</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="pages/examples/invoice.html">OR9842</a></td>
+                                            <td>Call of Duty IV</td>
+                                            <td><span class="badge badge-success">Shipped</span></td>
+                                            <td>
+                                                <div class="sparkbar" data-color="#00a65a" data-height="20">
+                                                    90,80,90,-70,61,-83,63</div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive -->
                         </div>
                         <!-- /.card-body -->
                         <div class="card-footer clearfix">
-                            <button type="button" class="btn btn-primary float-right"><i class="fas fa-plus"></i> Add
-                                item</button>
+                            <a href="javascript:void(0)" class="btn btn-sm btn-info float-left">Place New Order</a>
+                            <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">View All Orders</a>
                         </div>
+                        <!-- /.card-footer -->
                     </div>
                     <!-- /.card -->
                 </section>
@@ -274,13 +241,12 @@
                     <!-- /.card -->
 
                     <!-- solid sales graph -->
-                    <div class="card bg-gradient-info">
+                    <div class="card bg-gradient-info" style="height: 395px">
                         <div class="card-header border-0">
                             <h3 class="card-title">
-                                <i class="fas fa-th mr-1"></i>
-                                Sales Graph
+                                <i class="fas fa-chart-line mr-1"></i>
+                                Juegos más populares
                             </h3>
-
                             <div class="card-tools">
                                 <button type="button" class="btn bg-info btn-sm" data-card-widget="collapse">
                                     <i class="fas fa-minus"></i>
@@ -291,83 +257,59 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <canvas class="chart" id="line-chart"
-                                style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                            <div class="card-body table-responsive p-0">
+                                <table class="table table-striped table-valign-middle">
+                                    <thead class="text-center">
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Juego</th>
+                                            <th>N° Inscripciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-center">
+                                        @foreach (json_decode($data4) as $row)
+                                            <tr>
+                                                <td>{{ $loop->iteration }}</td>
+                                                <td>{{ $row->nombre }}</td>
+                                                <td>{{ $row->inscripciones }}</td>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+
                         </div>
                         <!-- /.card-body -->
-                        <div class="card-footer bg-transparent">
-                            <div class="row">
-                                <div class="col-4 text-center">
-                                    <input type="text" class="knob" data-readonly="true" value="20"
-                                        data-width="60" data-height="60" data-fgColor="#39CCCC">
-
-                                    <div class="text-white">Mail-Orders</div>
-                                </div>
-                                <!-- ./col -->
-                                <div class="col-4 text-center">
-                                    <input type="text" class="knob" data-readonly="true" value="50"
-                                        data-width="60" data-height="60" data-fgColor="#39CCCC">
-
-                                    <div class="text-white">Online</div>
-                                </div>
-                                <!-- ./col -->
-                                <div class="col-4 text-center">
-                                    <input type="text" class="knob" data-readonly="true" value="30"
-                                        data-width="60" data-height="60" data-fgColor="#39CCCC">
-
-                                    <div class="text-white">In-Store</div>
-                                </div>
-                                <!-- ./col -->
-                            </div>
-                            <!-- /.row -->
-                        </div>
-                        <!-- /.card-footer -->
                     </div>
                     <!-- /.card -->
 
-                    <!-- Calendar -->
                     <div class="card bg-gradient-success">
                         <div class="card-header border-0">
-
-                            <h3 class="card-title">
-                                <i class="far fa-calendar-alt"></i>
-                                Calendar
+                            <h3 class="card-title m-1">
+                                <i class="fas fa-chart-pie mr-1"></i>
+                                Juegos por categoría de juego
                             </h3>
-                            <!-- tools card -->
-                            <div class="card-tools">
-                                <!-- button with a dropdown -->
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-success btn-sm dropdown-toggle"
-                                        data-toggle="dropdown" data-offset="-52">
-                                        <i class="fas fa-bars"></i>
-                                    </button>
-                                    <div class="dropdown-menu" role="menu">
-                                        <a href="#" class="dropdown-item">Add new event</a>
-                                        <a href="#" class="dropdown-item">Clear events</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a href="#" class="dropdown-item">View calendar</a>
-                                    </div>
-                                </div>
-                                <button type="button" class="btn btn-success btn-sm" data-card-widget="collapse">
-                                    <i class="fas fa-minus"></i>
-                                </button>
-                                <button type="button" class="btn btn-success btn-sm" data-card-widget="remove">
-                                    <i class="fas fa-times"></i>
-                                </button>
-                            </div>
-                            <!-- /. tools -->
                         </div>
-                        <!-- /.card-header -->
-                        <div class="card-body pt-0">
-                            <!--The calendar -->
-                            <div id="calendar" style="width: 100%"></div>
+                        <div class="card-body">
+                            <canvas id="jug-x-cat" height="300" style="height: 300px;"></canvas>
                         </div>
-                        
-                        
-                        <!-- /.card-body -->
+                        <!-- /.card-body-->
+                    </div>
+
+                    <div class="card bg-gradient-white">
+                        <div class="card-header border-0">
+                            <h3 class="card-title m-1">
+                                <i class="fas fa-chart-pie mr-1"></i>
+                                Inscripciones Individuales VS. Grupales
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="ins-x-modo" height="300" style="height: 300px;"></canvas>
+                        </div>
+                        <!-- /.card-body-->
                     </div>
                     <!-- /.card -->
                 </section>
+
                 <!-- right col -->
             </div>
             <!-- /.row (main row) -->
@@ -378,139 +320,209 @@
 @stop
 
 @section('css')
-    
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 @stop
 
 @section('js')
     <script>
-        const juegos = JSON.parse(`<?php echo $data1["data"]; ?>`);
-        const juegos2 = JSON.parse(`<?php echo $data2["data"]; ?>`);
-    
+        const juegos = JSON.parse(`<?php echo $data1['data']; ?>`);
+        const juegos2 = JSON.parse(`<?php echo $data2['data']; ?>`);
+        const juegos3 = JSON.parse(`<?php echo $data3['data']; ?>`);
+        const juegos5 = JSON.parse(`<?php echo $data5['data']; ?>`);
+        const juegos6 = JSON.parse(`<?php echo $data6['data']; ?>`);
+
         console.log(juegos);
         console.log(juegos2);
         const ctx = document.getElementById('inscripciones-ind-x-juego');
         const ctx2 = document.getElementById('inscripciones-gru-x-juego');
         const ctx3 = document.getElementById('ins-x-cat');
+        const ctx4 = document.getElementById('jug-x-cat');
+        const ctx5 = document.getElementById('ins-x-modo');
 
-        
+
         new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: juegos.label,
-            datasets: [{
-            label: '# de Inscripcioness',
-            data: juegos.data,
-            borderWidth: 1,
-            backgroundColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 248, 154, 1)',
-                'rgba(255, 203, 203, 1)',
-                'rgba(243, 120, 120, 1)',
-                'rgba(115, 169, 173, 1)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 248, 154, 1)',
-                'rgba(255, 203, 203, 1)',
-                'rgba(243, 120, 120, 1)',
-                'rgba(115, 169, 173, 1)'
-            ]}]
-        },
-        options: {
-            maintainAspectRatio: false,
-            responsive: true,
-            scales: {
-            y: {
-                beginAtZero: true
+            type: 'bar',
+            data: {
+                labels: juegos.label,
+                datasets: [{
+                    label: '# de Inscripcioness',
+                    data: juegos.data,
+                    borderWidth: 1,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 248, 154, 1)',
+                        'rgba(255, 203, 203, 1)',
+                        'rgba(243, 120, 120, 1)',
+                        'rgba(115, 169, 173, 1)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 248, 154, 1)',
+                        'rgba(255, 203, 203, 1)',
+                        'rgba(243, 120, 120, 1)',
+                        'rgba(115, 169, 173, 1)'
+                    ]
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+                scales: {
+                    xAxes: [{
+                        gridLines: {
+                            display: false,
+                        }
+                    }],
+                    yAxes: [{
+                        ticks: {
+                            stepSize: 0.75,
+                            fontColor: '#474747',
+                            beginAtZero: true
+                        },
+                    }]
+                }
             }
-            }
-        }
         });
         new Chart(ctx2, {
-        type: 'bar',
-        data: {
-            labels: juegos2.label,
-            datasets: [{
-            label: '# de Inscripcioness',
-            data: juegos2.data,
-            borderWidth: 2,
-            backgroundColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 248, 154, 1)',
-                'rgba(255, 203, 203, 1)',
-                'rgba(243, 120, 120, 1)',
-                'rgba(115, 169, 173, 1)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 248, 154, 1)',
-                'rgba(255, 203, 203, 1)',
-                'rgba(243, 120, 120, 1)',
-                'rgba(115, 169, 173, 1)'
-            ]}]
-        },
-        options: {
-            maintainAspectRatio: false,
-            responsive: true,
-            scales: {
-            y: {
-                beginAtZero: true
+            type: 'bar',
+            data: {
+                labels: juegos2.label,
+                datasets: [{
+                    label: '# de Inscripcioness',
+                    data: juegos2.data,
+                    borderWidth: 2,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 248, 154, 1)',
+                        'rgba(255, 203, 203, 1)',
+                        'rgba(243, 120, 120, 1)',
+                        'rgba(115, 169, 173, 1)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 248, 154, 1)',
+                        'rgba(255, 203, 203, 1)',
+                        'rgba(243, 120, 120, 1)',
+                        'rgba(115, 169, 173, 1)'
+                    ]
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+                scales: {
+                    xAxes: [{
+                        gridLines: {
+                            display: false,
+                        }
+                    }],
+                    yAxes: [{
+                        ticks: {
+                            stepSize: 0.75,
+                            beginAtZero: true
+                        },
+                    }]
+                }
             }
-            }
-        }
         });
 
         new Chart(ctx3, {
-        type: 'pie',
-        data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-            datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
-                borderWidth: 1,
-                backgroundColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 248, 154, 1)',
-                'rgba(255, 203, 203, 1)',
-                'rgba(243, 120, 120, 1)',
-                'rgba(115, 169, 173, 1)'
-            ],
-                
-            }]
-        },
-        options: {
-            maintainAspectRatio: false,
-            responsive: true,
-            plugins: {
-                legend: {
-                    position: 'top',
-                },
-                title: {
-                    display: true,
-                    text: 'Pie Chart'
-                }
+            type: 'pie',
+            data: {
+                labels: juegos3.label,
+                datasets: [{
+                    label: '# of Votes',
+                    data: juegos3.data,
+                    borderWidth: 1,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 248, 154, 1)',
+                        'rgba(255, 203, 203, 1)',
+                        'rgba(243, 120, 120, 1)',
+                        'rgba(115, 169, 173, 1)'
+                    ],
+
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
             }
-        }
+        });
+
+        new Chart(ctx4, {
+            type: 'doughnut',
+            data: {
+                labels: juegos5.label,
+                datasets: [{
+                    label: '# of Votes',
+                    data: juegos5.data,
+                    borderWidth: 1,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 248, 154, 1)',
+                        'rgba(255, 203, 203, 1)',
+                        'rgba(243, 120, 120, 1)',
+                        'rgba(115, 169, 173, 1)'
+                    ],
+
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+            }
+        });
+
+        new Chart(ctx5, {
+            type: 'polarArea',
+            data: {
+                labels: juegos6.label,
+                datasets: [{
+                    data: [{{$stats['num_ins_ind']}},{{$stats['num_ins_gru']}}],
+                    borderWidth: 1,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 248, 154, 1)',
+                        'rgba(255, 203, 203, 1)',
+                        'rgba(243, 120, 120, 1)',
+                        'rgba(115, 169, 173, 1)'
+                    ],
+
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+            }
         });
     </script>
 @stop
