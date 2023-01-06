@@ -34,15 +34,9 @@
 								<th>Aula</th>
 								<th>Valor</th>
 								<th>Fecha Evento</th>
-<<<<<<< HEAD
 								<th>Categoria</th>
 								<th>Modo</th>
 								<td>ACTIONS</td>
-=======
-								<th>Id Categoria</th>
-								<th>Id Modo</th>
-								<td>ACTIONES</td>
->>>>>>> 48fc9c65715be92c0dcc7a0265d5c81bce22d33f
 							</tr>
 						</thead>
 						<tbody>
