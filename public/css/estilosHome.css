@@ -13,13 +13,19 @@
     font-size: 35px; 
     margin-right:auto; 
     padding:0 20px; 
-    background-color: #ffb703;
+    color:#ffb703; 
+    text-align:center; 
 
+  }
+
+  .title{
+    background-color: #ffb703;
+    color: #240046;
   }
   
   header {
     width: 100%;
-    height: auto;
+    height: 10px;
     padding: 40px;
     text-align: center;
     background-color: #ffb703;
@@ -28,7 +34,9 @@
     justify-content: flex-end
   }
   
-  nav {
+  hr{
+    color: ffb703;
+    size: 6px;
     background-color: #ffb703;
   }
 
