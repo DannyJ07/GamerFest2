@@ -12,10 +12,6 @@
                 <form>
 					<input type="hidden" wire:model="selected_id">
             <div class="form-group">
-                <label for="id_actividades"></label>
-                <input wire:model="id_actividades" type="text" class="form-control" id="id_actividades" placeholder="Id Actividades">@error('id_actividades') <span class="error text-danger">{{ $message }}</span> @enderror
-            </div>
-            <div class="form-group">
                 <label for="nombre"></label>
                 <input wire:model="nombre" type="text" class="form-control" id="nombre" placeholder="Nombre">@error('nombre') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
