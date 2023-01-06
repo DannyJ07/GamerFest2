@@ -22,10 +22,11 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 });
+
+
+//Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
 
 //Route Hooks - Do not delete//
 	Route::view('tipopgs', 'livewire.tipopgs.index')->middleware('auth');
