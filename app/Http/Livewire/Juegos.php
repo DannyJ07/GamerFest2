@@ -5,6 +5,8 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\Juego;
+use App\Models\Categoria;
+use App\Models\Modo;
 
 class Juegos extends Component
 {
@@ -18,16 +20,20 @@ class Juegos extends Component
     {
 		$keyWord = '%'.$this->keyWord .'%';
         return view('livewire.juegos.view', [
-            'juegos' => Juego::latest()
+			$categorias=Categoria::all(),
+			$modos=Modo::all(),
+            'juegos' => Juego::with('categoria')->with('modo')
 						->orWhere('nombre', 'LIKE', $keyWord)
 						->orWhere('reglas', 'LIKE', $keyWord)
 						->orWhere('aula', 'LIKE', $keyWord)
 						->orWhere('valor', 'LIKE', $keyWord)
 						->orWhere('fecha_evento', 'LIKE', $keyWord)
-						->orWhere('id_categoria', 'LIKE', $keyWord)
-						->orWhere('id_modo', 'LIKE', $keyWord)
+						->whereHas('categoria', fn($query)=>
+                        $query->where('tipo', 'LIKE', $keyWord))
+						->whereHas('modo', fn($query)=>
+                        $query->where('tipo', 'LIKE', $keyWord))
 						->paginate(10),
-        ]);
+        ],compact('categorias','modos'));
     }
 
 	public function index()
