@@ -51,7 +51,7 @@
             <div class="form-group">
                 <label for="doc_pago"></label>
                 <input wire:model="doc_pago" type="text" class="form-control" id="doc_pago" placeholder="Doc Pago">@error('doc_pago') <span class="error text-danger">{{ $message }}</span> @enderror
-            </div>
+            </div>            
 
                 </form>
             </div>

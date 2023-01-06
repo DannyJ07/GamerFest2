@@ -132,4 +132,32 @@ class Inscripcionis extends Component
             $record->delete();
         }
     }
+    public function  pjrandom($id)
+    {
+        $record = Participante::findOrFail($id);
+        $this->selected_id = $id; 
+		$this->id_juego = $record-> id_juego;
+		$this->id_participantes = $record-> id_participantes;
+        if ($this->id_juego=="CLASH ROYAL"){
+            $personaje=array("a"=>"Caballero","b"=>"Princesa","c"=>"Mago","d"=>"Tronco","e"=>"Flechas");
+        }
+        if ($this->id_juego=="FIFA"){
+            $personaje=array("a"=>"Messi","b"=>"Ronaldo","c"=>"Cristiano","d"=>"Maradona");
+        }
+        if ($this->id_juego=="LEGUE OF LEGENDS"){
+            $personaje=array("a"=>"Aatrox","b"=>"Warwick","c"=>"Katarina","d"=>"Kayn");
+        }
+        if ($this->id_juego=="DOTA 2"){
+            $personaje=array("a"=>"Selemene","b"=>"Davion","c"=>"Shadow Fiend","d"=>"Fymryn");
+        }
+        if ($this->id_juego=="MARIO KART"){
+            $personaje=array("a"=>"Mario","b"=>"Luigui","c"=>"Bowser","d"=>"Peach");
+        }
+        if ($this->id_juego=="FREE FIRE"){
+            $personaje=array("a"=>"Kelly","b"=>"Paloma","c"=>"Kla","d"=>"Maxim");
+        }
+        shuffle($personaje);
+        isset($_GET[$personaje[0]]);     
+    }
+
 }

@@ -29,6 +29,15 @@ class Participantes extends Component
 						->paginate(10),
         ]);
     }
+    public function index()
+    {
+        return Participante::all();
+    }
+
+    public function listarParticipantes(Participantes $participante)
+    {
+        return $participante;
+    }
 	
     public function cancel()
     {
@@ -125,4 +134,22 @@ class Participantes extends Component
             $record->delete();
         }
     }
+    
+	public function enpie($id)
+    {
+        $record = Equipo::findOrFail($id);
+        $this->selected_id = $id; 
+		$this->nombre = $record-> nombre;
+		$this->enjuego = $record-> enjuego;
+        if($this->enjuego=="Si")
+        {
+            session()->flash('message', 'El equipo', isset($_GET[$record->nombre]),'aun esta en la competencia') ;
+        }
+
+        else{
+            session()->flash('message', 'El equipo ', isset($_GET[$record->nombre]),'ya no  esta en la competencia') ;
+        }
+        
+    }
+
 }
