@@ -13,7 +13,6 @@ class ActividadeFactory extends Factory
     public function definition()
     {
         return [
-			'id_actividades' => $this->faker->name,
 			'nombre' => $this->faker->name,
 			'fecha' => $this->faker->name,
 			'hora' => $this->faker->name,
