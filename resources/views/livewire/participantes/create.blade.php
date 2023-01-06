@@ -32,7 +32,12 @@
             </div>
             <div class="form-group">
                 <label for="id_equipo"></label>
-                <input wire:model="id_equipo" type="text" class="form-control" id="id_equipo" placeholder="Id Equipo">@error('id_equipo') <span class="error text-danger">{{ $message }}</span> @enderror
+                <select class="form-control" wire:model="id_equipo">
+                <option value="">seleccione un equipo</option>   
+                        @foreach ($equipos as $equipo)
+                        <option value="{{$equipo->id}}">{{ $equipo->nombre}}</option>
+                        @endforeach   
+                </select>
             </div>
 
                 </form>
