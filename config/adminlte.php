@@ -357,6 +357,11 @@ return [
             'icon' => 'fas fa-fw',
         ],
         [
+            'text' => 'Actividades',
+            'url'  => '/actividades',
+            'icon' => 'fas fa-fw',
+        ],
+        [
             'text' => 'Modos',
             'url'  => '/modos',
             'icon' => 'fas fa-fw fa-puzzle-piece',

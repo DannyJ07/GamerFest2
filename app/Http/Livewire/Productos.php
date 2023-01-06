@@ -11,7 +11,7 @@ class Productos extends Component
     use WithPagination;
 
 	protected $paginationTheme = 'bootstrap';
-    public $selected_id, $keyWord, $nombre, $descripcion, $valor;
+    public $selected_id, $keyWord, $id_producto, $nombre, $descripcion, $valor;
     public $updateMode = false;
 
     public function render()
@@ -19,6 +19,7 @@ class Productos extends Component
 		$keyWord = '%'.$this->keyWord .'%';
         return view('livewire.productos.view', [
             'productos' => Producto::latest()
+						->orWhere('id_producto', 'LIKE', $keyWord)
 						->orWhere('nombre', 'LIKE', $keyWord)
 						->orWhere('descripcion', 'LIKE', $keyWord)
 						->orWhere('valor', 'LIKE', $keyWord)
@@ -34,6 +35,7 @@ class Productos extends Component
 	
     private function resetInput()
     {		
+		$this->id_producto = null;
 		$this->nombre = null;
 		$this->descripcion = null;
 		$this->valor = null;
@@ -42,12 +44,14 @@ class Productos extends Component
     public function store()
     {
         $this->validate([
+		'id_producto' => 'required',
 		'nombre' => 'required',
 		'descripcion' => 'required',
 		'valor' => 'required',
         ]);
 
         Producto::create([ 
+			'id_producto' => $this-> id_producto,
 			'nombre' => $this-> nombre,
 			'descripcion' => $this-> descripcion,
 			'valor' => $this-> valor
@@ -63,6 +67,7 @@ class Productos extends Component
         $record = Producto::findOrFail($id);
 
         $this->selected_id = $id; 
+		$this->id_producto = $record-> id_producto;
 		$this->nombre = $record-> nombre;
 		$this->descripcion = $record-> descripcion;
 		$this->valor = $record-> valor;
@@ -73,6 +78,7 @@ class Productos extends Component
     public function update()
     {
         $this->validate([
+		'id_producto' => 'required',
 		'nombre' => 'required',
 		'descripcion' => 'required',
 		'valor' => 'required',
@@ -81,6 +87,7 @@ class Productos extends Component
         if ($this->selected_id) {
 			$record = Producto::find($this->selected_id);
             $record->update([ 
+			'id_producto' => $this-> id_producto,
 			'nombre' => $this-> nombre,
 			'descripcion' => $this-> descripcion,
 			'valor' => $this-> valor
