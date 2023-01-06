@@ -33,12 +33,7 @@
             <div class="form-group">
                 <label for="id_categoria"></label>
                 <select class="form-control" wire:model="id_categoria">
-<<<<<<< HEAD
                 <option value="">seleccione una categoria</option>   
-=======
-                <!-- <input wire:model="id_categoria" type="text" class="form-control" id="id_categoria" placeholder="Id Categoria">@error('id_categoria') <span class="error text-danger">{{ $message }}</span> @enderror -->
-                <option value="">Seleccione una categoria</option>   
->>>>>>> 48fc9c65715be92c0dcc7a0265d5c81bce22d33f
                         @foreach ($categorias as $categoria)
                         <option value="{{$categoria->id}}">{{ $categoria->tipo}}</option>
                         @endforeach   
@@ -47,12 +42,7 @@
             <div class="form-group">
                 <label for="id_modo"></label>
                 <select class="form-control" wire:model="id_modo">
-<<<<<<< HEAD
                 <option value="">seleccione un modo</option>   
-=======
-                <!-- <input wire:model="id_categoria" type="text" class="form-control" id="id_categoria" placeholder="Id Categoria">@error('id_categoria') <span class="error text-danger">{{ $message }}</span> @enderror -->
-                <option value="">Seleccione un modo</option>   
->>>>>>> 48fc9c65715be92c0dcc7a0265d5c81bce22d33f
                         @foreach ($modos as $modo)
                         <option value="{{$modo->id}}">{{ $modo->tipo}}</option>
                         @endforeach   
