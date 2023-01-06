@@ -3,7 +3,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="createDataModalLabel">Create New Juego</h5>
+                <h5 class="modal-title" id="createDataModalLabel">Crear Nuevo Juego</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                      <span aria-hidden="true close-btn">×</span>
                 </button>
@@ -33,8 +33,12 @@
             <div class="form-group">
                 <label for="id_categoria"></label>
                 <select class="form-control" wire:model="id_categoria">
-                <!-- <input wire:model="id_categoria" type="text" class="form-control" id="id_categoria" placeholder="Id Categoria">@error('id_categoria') <span class="error text-danger">{{ $message }}</span> @enderror -->
+<<<<<<< HEAD
                 <option value="">seleccione una categoria</option>   
+=======
+                <!-- <input wire:model="id_categoria" type="text" class="form-control" id="id_categoria" placeholder="Id Categoria">@error('id_categoria') <span class="error text-danger">{{ $message }}</span> @enderror -->
+                <option value="">Seleccione una categoria</option>   
+>>>>>>> 48fc9c65715be92c0dcc7a0265d5c81bce22d33f
                         @foreach ($categorias as $categoria)
                         <option value="{{$categoria->id}}">{{ $categoria->tipo}}</option>
                         @endforeach   
@@ -43,18 +47,22 @@
             <div class="form-group">
                 <label for="id_modo"></label>
                 <select class="form-control" wire:model="id_modo">
-                <!-- <input wire:model="id_categoria" type="text" class="form-control" id="id_categoria" placeholder="Id Categoria">@error('id_categoria') <span class="error text-danger">{{ $message }}</span> @enderror -->
+<<<<<<< HEAD
                 <option value="">seleccione un modo</option>   
+=======
+                <!-- <input wire:model="id_categoria" type="text" class="form-control" id="id_categoria" placeholder="Id Categoria">@error('id_categoria') <span class="error text-danger">{{ $message }}</span> @enderror -->
+                <option value="">Seleccione un modo</option>   
+>>>>>>> 48fc9c65715be92c0dcc7a0265d5c81bce22d33f
                         @foreach ($modos as $modo)
                         <option value="{{$modo->id}}">{{ $modo->tipo}}</option>
                         @endforeach   
-                </select>            </div>
-
+                </select>            
+            </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Close</button>
-                <button type="button" wire:click.prevent="store()" class="btn btn-primary close-modal">Save</button>
+                <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Cerrar</button>
+                <button type="button" wire:click.prevent="store()" class="btn btn-primary close-modal">Guardar</button>
             </div>
         </div>
     </div>

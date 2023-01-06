@@ -3,7 +3,7 @@
     <div class="modal-dialog" role="document">
        <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="updateModalLabel">Update Juego</h5>
+                <h5 class="modal-title" id="updateModalLabel">Actualizar Juego</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span wire:click.prevent="cancel()" aria-hidden="true">×</span>
                 </button>
@@ -33,18 +33,28 @@
             </div>
             <div class="form-group">
                 <label for="id_categoria"></label>
-                <input wire:model="id_categoria" type="text" class="form-control" id="id_categoria" placeholder="Id Categoria">@error('id_categoria') <span class="error text-danger">{{ $message }}</span> @enderror
+                <select class="form-control" wire:model="id_categoria">
+                <option value="">seleccione una categoria</option>   
+                        @foreach ($categorias as $categoria)
+                        <option value="{{$categoria->id}}">{{ $categoria->tipo}}</option>
+                        @endforeach   
+                </select>
             </div>
             <div class="form-group">
                 <label for="id_modo"></label>
-                <input wire:model="id_modo" type="text" class="form-control" id="id_modo" placeholder="Id Modo">@error('id_modo') <span class="error text-danger">{{ $message }}</span> @enderror
+                <select class="form-control" wire:model="id_modo">
+                <option value="">seleccione un modo</option>   
+                        @foreach ($modos as $modo)
+                        <option value="{{$modo->id}}">{{ $modo->tipo}}</option>
+                        @endforeach   
+                </select>  
             </div>
 
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" wire:click.prevent="cancel()" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" wire:click.prevent="update()" class="btn btn-primary" data-dismiss="modal">Save</button>
+                <button type="button" wire:click.prevent="cancel()" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" wire:click.prevent="update()" class="btn btn-primary" data-dismiss="modal">Guardar</button>
             </div>
        </div>
     </div>

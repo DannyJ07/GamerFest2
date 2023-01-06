@@ -3,7 +3,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="createDataModalLabel">Create New Inscripcioni</h5>
+                <h5 class="modal-title" id="createDataModalLabel">Crear Nuevas Inscripciones Individuales</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                      <span aria-hidden="true close-btn">×</span>
                 </button>
@@ -20,18 +20,15 @@
             </div>
             <div class="form-group">
                 <label for="id_juego"></label>
-                <!-- <select wire:model="id_juego" class="form-control selectícker" id="id_juego" placeholder="Id Juego">@error('id_juego') <span class="error text-danger">{{ $message }}</span> @enderror --> 
                 <select class="form-control" wire:model="id_juego">
                 <option value="">seleccione un juego</option>   
                         @foreach ($juegos as $juego)
                         <option value="{{$juego->id}}">{{ $juego->nombre}}</option>
-                        @endforeach  
-                      
+                        @endforeach           
                 </select>
             </div>
             <div class="form-group">
                 <label for="id_participantes"></label>
-                <!-- <input wire:model="id_participantes" type="text" class="form-control" id="id_participantes" placeholder="Id Participantes">@error('id_participantes') <span class="error text-danger">{{ $message }}</span> @enderror -->
                 <select class="form-control" wire:model="id_participantes">
                 <option value="">Seleccione un participante</option>
                 @foreach ($participantes as $participante)
@@ -41,7 +38,6 @@
             </div>
             <div class="form-group">
                 <label for="id_pago"></label>
-                <!-- <input wire:model="id_pago" type="text" class="form-control" id="id_pago" placeholder="Id Pago">@error('id_pago') <span class="error text-danger">{{ $message }}</span> @enderror -->
                 <select class="form-control" wire:model="id_pago">
                         <option value="">seleccione un tipo de pago</option> 
                         @foreach ($tipopgs as $tipopg)
@@ -57,8 +53,8 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Close</button>
-                <button type="button" wire:click.prevent="store()" class="btn btn-primary close-modal">Save</button>
+                <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Cerrar</button>
+                <button type="button" wire:click.prevent="store()" class="btn btn-primary close-modal">Guardar</button>
             </div>
         </div>
     </div>

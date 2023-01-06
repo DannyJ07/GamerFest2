@@ -33,14 +33,19 @@
             </div>
             <div class="form-group">
                 <label for="id_equipo"></label>
-                <input wire:model="id_equipo" type="text" class="form-control" id="id_equipo" placeholder="Id Equipo">@error('id_equipo') <span class="error text-danger">{{ $message }}</span> @enderror
+                <select class="form-control" wire:model="id_equipo">
+                <option value="">seleccione un equipo</option>   
+                        @foreach ($equipos as $equipo)
+                        <option value="{{$equipo->id}}">{{ $equipo->nombre}}</option>
+                        @endforeach   
+                </select>
             </div>
 
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" wire:click.prevent="cancel()" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" wire:click.prevent="update()" class="btn btn-primary" data-dismiss="modal">Save</button>
+                <button type="button" wire:click.prevent="cancel()" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" wire:click.prevent="update()" class="btn btn-primary" data-dismiss="modal">Guardar</button>
             </div>
        </div>
     </div>
