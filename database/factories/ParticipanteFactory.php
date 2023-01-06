@@ -18,7 +18,6 @@ class ParticipanteFactory extends Factory
 			'cedula' => $this->faker->name,
 			'correo' => $this->faker->name,
 			'telefono' => $this->faker->name,
-			'enjuego' => $this->faker->name,
 			'id_equipo' => $this->faker->name,
         ];
     }

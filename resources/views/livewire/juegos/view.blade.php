@@ -7,17 +7,19 @@
 					<div style="display: flex; justify-content: space-between; align-items: center;">
 						<div class="float-left">
 							<h4><i class="fab fa-laravel text-info"></i>
-							Juegos </h4>
+							Juego Listing </h4>
 						</div>
-
+						<div wire:poll.60s>
+							<code><h5>{{ now()->format('H:i:s') }} UTC</h5></code>
+						</div>
 						@if (session()->has('message'))
 						<div wire:poll.4s class="btn btn-sm btn-success" style="margin-top:0px; margin-bottom:0px;"> {{ session('message') }} </div>
 						@endif
 						<div>
-							<input wire:model='keyWord' type="text" class="form-control" name="search" id="search" placeholder="Buscar Juegos">
+							<input wire:model='keyWord' type="text" class="form-control" name="search" id="search" placeholder="Search Juegos">
 						</div>
 						<div class="btn btn-sm btn-info" data-toggle="modal" data-target="#createDataModal">
-						<i class="fa fa-plus"></i>  Añadir Juegos
+						<i class="fa fa-plus"></i>  Add Juegos
 						</div>
 					</div>
 				</div>
@@ -34,9 +36,10 @@
 								<th>Reglas</th>
 								<th>Aula</th>
 								<th>Valor</th>
+								<th>Fecha Evento</th>
 								<th>Id Categoria</th>
 								<th>Id Modo</th>
-								<td>Acciones</td>
+								<td>ACTIONS</td>
 							</tr>
 						</thead>
 						<tbody>
@@ -47,6 +50,7 @@
 								<td>{{ $row->reglas }}</td>
 								<td>{{ $row->aula }}</td>
 								<td>{{ $row->valor }}</td>
+								<td>{{ $row->fecha_evento }}</td>
 								<td>{{ $row->id_categoria }}</td>
 								<td>{{ $row->id_modo }}</td>
 								<td width="90">
@@ -55,8 +59,8 @@
 									Actions
 									</button>
 									<div class="dropdown-menu dropdown-menu-right">
-									<a data-toggle="modal" data-target="#updateModal" class="dropdown-item" wire:click="edit({{$row->id}})"><i class="fa fa-edit"></i> Editar </a>							 
-									<a class="dropdown-item" onclick="confirm('Confirm Delete Juego id {{$row->id}}? \nDeleted Juegos cannot be recovered!')||event.stopImmediatePropagation()" wire:click="destroy({{$row->id}})"><i class="fa fa-trash"></i> Eliminar </a>   
+									<a data-toggle="modal" data-target="#updateModal" class="dropdown-item" wire:click="edit({{$row->id}})"><i class="fa fa-edit"></i> Edit </a>							 
+									<a class="dropdown-item" onclick="confirm('Confirm Delete Juego id {{$row->id}}? \nDeleted Juegos cannot be recovered!')||event.stopImmediatePropagation()" wire:click="destroy({{$row->id}})"><i class="fa fa-trash"></i> Delete </a>   
 									</div>
 								</div>
 								</td>

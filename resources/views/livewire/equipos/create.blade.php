@@ -14,10 +14,6 @@
                 <label for="nombre"></label>
                 <input wire:model="nombre" type="text" class="form-control" id="nombre" placeholder="Nombre">@error('nombre') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
-            <div class="form-group">
-                <label for="enjuego"></label>
-                <input wire:model="enjuego" type="text" class="form-control" id="enjuego" placeholder="Enjuego">@error('enjuego') <span class="error text-danger">{{ $message }}</span> @enderror
-            </div>
 
                 </form>
             </div>

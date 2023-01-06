@@ -17,6 +17,7 @@ class JuegoFactory extends Factory
 			'reglas' => $this->faker->name,
 			'aula' => $this->faker->name,
 			'valor' => $this->faker->name,
+			'fecha_evento' => $this->faker->name,
 			'id_categoria' => $this->faker->name,
 			'id_modo' => $this->faker->name,
         ];

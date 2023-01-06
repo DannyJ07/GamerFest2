@@ -11,7 +11,7 @@ class Participantes extends Component
     use WithPagination;
 
 	protected $paginationTheme = 'bootstrap';
-    public $selected_id, $keyWord, $nombre, $apellido, $cedula, $correo, $telefono, $enjuego, $id_equipo;
+    public $selected_id, $keyWord, $nombre, $apellido, $cedula, $correo, $telefono, $id_equipo;
     public $updateMode = false;
 
     public function render()
@@ -24,19 +24,9 @@ class Participantes extends Component
 						->orWhere('cedula', 'LIKE', $keyWord)
 						->orWhere('correo', 'LIKE', $keyWord)
 						->orWhere('telefono', 'LIKE', $keyWord)
-						->orWhere('enjuego', 'LIKE', $keyWord)
 						->orWhere('id_equipo', 'LIKE', $keyWord)
 						->paginate(10),
         ]);
-    }
-    public function index()
-    {
-        return Participante::all();
-    }
-
-    public function listarParticipantes(Participantes $participante)
-    {
-        return $participante;
     }
 	
     public function cancel()
@@ -52,7 +42,6 @@ class Participantes extends Component
 		$this->cedula = null;
 		$this->correo = null;
 		$this->telefono = null;
-		$this->enjuego = null;
 		$this->id_equipo = null;
     }
 
@@ -64,7 +53,6 @@ class Participantes extends Component
 		'cedula' => 'required',
 		'correo' => 'required',
 		'telefono' => 'required',
-		'enjuego' => 'required',
         ]);
 
         Participante::create([ 
@@ -73,7 +61,6 @@ class Participantes extends Component
 			'cedula' => $this-> cedula,
 			'correo' => $this-> correo,
 			'telefono' => $this-> telefono,
-			'enjuego' => $this-> enjuego,
 			'id_equipo' => $this-> id_equipo
         ]);
         
@@ -92,7 +79,6 @@ class Participantes extends Component
 		$this->cedula = $record-> cedula;
 		$this->correo = $record-> correo;
 		$this->telefono = $record-> telefono;
-		$this->enjuego = $record-> enjuego;
 		$this->id_equipo = $record-> id_equipo;
 		
         $this->updateMode = true;
@@ -106,7 +92,6 @@ class Participantes extends Component
 		'cedula' => 'required',
 		'correo' => 'required',
 		'telefono' => 'required',
-		'enjuego' => 'required',
         ]);
 
         if ($this->selected_id) {
@@ -117,7 +102,6 @@ class Participantes extends Component
 			'cedula' => $this-> cedula,
 			'correo' => $this-> correo,
 			'telefono' => $this-> telefono,
-			'enjuego' => $this-> enjuego,
 			'id_equipo' => $this-> id_equipo
             ]);
 
@@ -134,22 +118,4 @@ class Participantes extends Component
             $record->delete();
         }
     }
-    
-	public function enpie($id)
-    {
-        $record = Equipo::findOrFail($id);
-        $this->selected_id = $id; 
-		$this->nombre = $record-> nombre;
-		$this->enjuego = $record-> enjuego;
-        if($this->enjuego=="Si")
-        {
-            session()->flash('message', 'El equipo', isset($_GET[$record->nombre]),'aun esta en la competencia') ;
-        }
-
-        else{
-            session()->flash('message', 'El equipo ', isset($_GET[$record->nombre]),'ya no  esta en la competencia') ;
-        }
-        
-    }
-
 }

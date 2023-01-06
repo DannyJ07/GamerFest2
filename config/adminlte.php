@@ -352,6 +352,11 @@ return [
             'icon' => 'fas fa-fw fa-gamepad',
         ],
         [
+            'text' => 'Productos',
+            'url'  => '/productos',
+            'icon' => 'fas fa-fw',
+        ],
+        [
             'text' => 'Modos',
             'url'  => '/modos',
             'icon' => 'fas fa-fw fa-puzzle-piece',

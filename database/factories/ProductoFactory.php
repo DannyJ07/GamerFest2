@@ -2,18 +2,20 @@
 
 namespace Database\Factories;
 
-use App\Models\Equipo;
+use App\Models\Producto;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
-class EquipoFactory extends Factory
+class ProductoFactory extends Factory
 {
-    protected $model = Equipo::class;
+    protected $model = Producto::class;
 
     public function definition()
     {
         return [
 			'nombre' => $this->faker->name,
+			'descripcion' => $this->faker->name,
+			'valor' => $this->faker->name,
         ];
     }
 }

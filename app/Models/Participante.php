@@ -13,7 +13,7 @@ class Participante extends Model
 
     protected $table = 'participantes';
 
-    protected $fillable = ['nombre','apellido','cedula','correo','telefono','enjuego','id_equipo'];
+    protected $fillable = ['nombre','apellido','cedula','correo','telefono','id_equipo'];
 	
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne

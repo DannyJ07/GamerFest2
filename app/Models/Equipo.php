@@ -13,7 +13,7 @@ class Equipo extends Model
 
     protected $table = 'equipos';
 
-    protected $fillable = ['nombre','enjuego'];
+    protected $fillable = ['nombre'];
 	
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany

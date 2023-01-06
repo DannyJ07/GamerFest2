@@ -29,6 +29,7 @@ Route::middleware([
 //Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
 
 //Route Hooks - Do not delete//
+	Route::view('productos', 'livewire.productos.index')->middleware('auth');
 	Route::view('tipopgs', 'livewire.tipopgs.index')->middleware('auth');
 	Route::view('participantes', 'livewire.participantes.index')->middleware('auth');
 	Route::view('inscripcionis', 'livewire.inscripcionis.index')->middleware('auth');
