@@ -13,7 +13,6 @@ class ProductoFactory extends Factory
     public function definition()
     {
         return [
-			'id_producto' => $this->faker->name,
 			'nombre' => $this->faker->name,
 			'descripcion' => $this->faker->name,
 			'valor' => $this->faker->name,

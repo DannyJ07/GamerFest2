@@ -32,7 +32,6 @@
 						<thead class="thead">
 							<tr> 
 								<td>#</td> 
-								<th>Id Producto</th>
 								<th>Nombre</th>
 								<th>Descripcion</th>
 								<th>Valor</th>
@@ -43,7 +42,6 @@
 							@foreach($productos as $row)
 							<tr>
 								<td>{{ $loop->iteration }}</td> 
-								<td>{{ $row->id_producto }}</td>
 								<td>{{ $row->nombre }}</td>
 								<td>{{ $row->descripcion }}</td>
 								<td>{{ $row->valor }}</td>

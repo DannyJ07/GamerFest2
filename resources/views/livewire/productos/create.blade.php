@@ -11,10 +11,6 @@
            <div class="modal-body">
 				<form>
             <div class="form-group">
-                <label for="id_producto"></label>
-                <input wire:model="id_producto" type="text" class="form-control" id="id_producto" placeholder="Id Producto">@error('id_producto') <span class="error text-danger">{{ $message }}</span> @enderror
-            </div>
-            <div class="form-group">
                 <label for="nombre"></label>
                 <input wire:model="nombre" type="text" class="form-control" id="nombre" placeholder="Nombre">@error('nombre') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
