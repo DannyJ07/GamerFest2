@@ -40,7 +40,15 @@ class Inscripcionis extends Component
     }
 	
    
-    
+    public function index()
+    {
+        return Inscripcioni::all();
+    }
+	
+    public function listarInscripcionis(Inscripcionis $inscripcioni)
+    {
+        return $inscripcioni;
+    }
 
 
     public function cancel()

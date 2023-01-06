@@ -11,7 +11,7 @@ class Actividades extends Component
     use WithPagination;
 
 	protected $paginationTheme = 'bootstrap';
-    public $selected_id, $keyWord, $id_actividades, $nombre, $fecha, $hora, $lugar;
+    public $selected_id, $keyWord, $nombre, $fecha, $hora, $lugar;
     public $updateMode = false;
 
     public function render()
@@ -19,7 +19,6 @@ class Actividades extends Component
 		$keyWord = '%'.$this->keyWord .'%';
         return view('livewire.actividades.view', [
             'actividades' => Actividade::latest()
-						->orWhere('id_actividades', 'LIKE', $keyWord)
 						->orWhere('nombre', 'LIKE', $keyWord)
 						->orWhere('fecha', 'LIKE', $keyWord)
 						->orWhere('hora', 'LIKE', $keyWord)
@@ -28,6 +27,16 @@ class Actividades extends Component
         ]);
     }
 	
+    public function index()
+    {
+        return Actividade::all();
+    }
+	
+    public function listarActividades(Actividades $actividade)
+    {
+        return $actividade;
+    }
+
     public function cancel()
     {
         $this->resetInput();
@@ -36,7 +45,6 @@ class Actividades extends Component
 	
     private function resetInput()
     {		
-		$this->id_actividades = null;
 		$this->nombre = null;
 		$this->fecha = null;
 		$this->hora = null;
@@ -46,7 +54,6 @@ class Actividades extends Component
     public function store()
     {
         $this->validate([
-		'id_actividades' => 'required',
 		'nombre' => 'required',
 		'fecha' => 'required',
 		'hora' => 'required',
@@ -54,7 +61,6 @@ class Actividades extends Component
         ]);
 
         Actividade::create([ 
-			'id_actividades' => $this-> id_actividades,
 			'nombre' => $this-> nombre,
 			'fecha' => $this-> fecha,
 			'hora' => $this-> hora,
@@ -71,7 +77,6 @@ class Actividades extends Component
         $record = Actividade::findOrFail($id);
 
         $this->selected_id = $id; 
-		$this->id_actividades = $record-> id_actividades;
 		$this->nombre = $record-> nombre;
 		$this->fecha = $record-> fecha;
 		$this->hora = $record-> hora;
@@ -83,7 +88,6 @@ class Actividades extends Component
     public function update()
     {
         $this->validate([
-		'id_actividades' => 'required',
 		'nombre' => 'required',
 		'fecha' => 'required',
 		'hora' => 'required',
@@ -93,7 +97,6 @@ class Actividades extends Component
         if ($this->selected_id) {
 			$record = Actividade::find($this->selected_id);
             $record->update([ 
-			'id_actividades' => $this-> id_actividades,
 			'nombre' => $this-> nombre,
 			'fecha' => $this-> fecha,
 			'hora' => $this-> hora,

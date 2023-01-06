@@ -13,6 +13,7 @@ use App\Models\Modo;
 use Illuminate\Support\Arr;
 use App\Models\Inscripciong;
 use App\Models\Inscripcioni;
+use App\Models\Equipo;
 
 class HomeController extends Controller
 {
@@ -33,12 +34,16 @@ class HomeController extends Controller
      */
     public function index()
     {
+        //dd($this->getEventListByDate());
         $data1 = $this->getInsPorJuego();
         $data2 = $this->getInsGrPorJuego();
         $data3 = $this->getPorcentajeCategoria();
         $data4 = $this->getTopJuegos();
         $data5 = $this->getPorcentajesJuegosByCat();
         $data6 = $this->getInsIndvsGru();
+        $data7 = $this->getEventListByDate();
+        $data8 = $this->getEventListByAula();
+        $data9 = $this->getTeams();
         return view('dashboard', [
             'stats'=> $this->getStats(), 
             'data1'=>$data1, 
@@ -46,7 +51,10 @@ class HomeController extends Controller
             'data3'=>$data3, 
             'data4'=>$data4, 
             'data5'=>$data5,
-            'data6'=>$data6
+            'data6'=>$data6,
+            'data7'=>$data7,
+            'data8'=>$data8,
+            'data9'=>$data9
         ]);
 
     }
@@ -151,7 +159,15 @@ class HomeController extends Controller
     }
 
     public function getEventListByDate(){
-        return Juego::all()->orderBy('');
+        return json_encode(Juego::all()->sortBy('fecha_evento'));
     }
 
+    public function getEventListByAula(){
+        return json_encode(Juego::all()->sortBy('aula'));
+    }
+
+
+    public function getTeams(){
+        return json_encode(Equipo::all());
+    }
 }

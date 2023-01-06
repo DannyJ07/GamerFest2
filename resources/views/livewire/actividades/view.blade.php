@@ -29,7 +29,6 @@
 						<thead class="thead">
 							<tr> 
 								<td>#</td> 
-								<th>Id Actividades</th>
 								<th>Nombre</th>
 								<th>Fecha</th>
 								<th>Hora</th>
@@ -41,7 +40,6 @@
 							@foreach($actividades as $row)
 							<tr>
 								<td>{{ $loop->iteration }}</td> 
-								<td>{{ $row->id_actividades }}</td>
 								<td>{{ $row->nombre }}</td>
 								<td>{{ $row->fecha }}</td>
 								<td>{{ $row->hora }}</td>

@@ -4,7 +4,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             @livewire('actividades')
-        </div>
-    </div>
+        </div>     
+    </div>   
 </div>
 @endsection

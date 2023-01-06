@@ -13,6 +13,6 @@ class Actividade extends Model
 
     protected $table = 'actividades';
 
-    protected $fillable = ['id_actividades','nombre','fecha','hora','lugar'];
+    protected $fillable = ['nombre','fecha','hora','lugar'];
 	
 }

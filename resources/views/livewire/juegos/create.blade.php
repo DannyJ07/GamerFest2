@@ -28,16 +28,27 @@
             </div>
             <div class="form-group">
                 <label for="fecha_evento"></label>
-                <input wire:model="fecha_evento" type="text" class="form-control" id="fecha_evento" placeholder="Fecha Evento">@error('fecha_evento') <span class="error text-danger">{{ $message }}</span> @enderror
+                <input wire:model="fecha_evento" type="date" class="form-control" id="fecha_evento" placeholder="Fecha Evento">@error('fecha_evento') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
             <div class="form-group">
                 <label for="id_categoria"></label>
-                <input wire:model="id_categoria" type="text" class="form-control" id="id_categoria" placeholder="Id Categoria">@error('id_categoria') <span class="error text-danger">{{ $message }}</span> @enderror
+                <select class="form-control" wire:model="id_categoria">
+                <!-- <input wire:model="id_categoria" type="text" class="form-control" id="id_categoria" placeholder="Id Categoria">@error('id_categoria') <span class="error text-danger">{{ $message }}</span> @enderror -->
+                <option value="">seleccione una categoria</option>   
+                        @foreach ($categorias as $categoria)
+                        <option value="{{$categoria->id}}">{{ $categoria->tipo}}</option>
+                        @endforeach   
+                </select>
             </div>
             <div class="form-group">
                 <label for="id_modo"></label>
-                <input wire:model="id_modo" type="text" class="form-control" id="id_modo" placeholder="Id Modo">@error('id_modo') <span class="error text-danger">{{ $message }}</span> @enderror
-            </div>
+                <select class="form-control" wire:model="id_modo">
+                <!-- <input wire:model="id_categoria" type="text" class="form-control" id="id_categoria" placeholder="Id Categoria">@error('id_categoria') <span class="error text-danger">{{ $message }}</span> @enderror -->
+                <option value="">seleccione un modo</option>   
+                        @foreach ($modos as $modo)
+                        <option value="{{$modo->id}}">{{ $modo->tipo}}</option>
+                        @endforeach   
+                </select>            </div>
 
                 </form>
             </div>

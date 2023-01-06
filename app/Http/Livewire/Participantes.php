@@ -28,6 +28,16 @@ class Participantes extends Component
 						->paginate(10),
         ]);
     }
+
+    public function index()
+    {
+        return Participante::all();
+    }
+	
+    public function listarParticipantes(Participantes $participante)
+    {
+        return $participante;
+    }
 	
     public function cancel()
     {

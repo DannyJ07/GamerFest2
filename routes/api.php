@@ -24,13 +24,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::apiResource(name: 'listarEquipo', controller: Equipos::class);
-Route::apiResource(name:'antiguedad',controller: Equipos::class);
+Route::apiResource(name:'listarEquipo', controller: Equipos::class);
+Route::apiResource(name:'listarInscripciongs', controller: Equipos::class);
+Route::apiResource(name:'listarInscripcionis', controller: Equipos::class);
+Route::apiResource(name:'listarModos', controller: Equipos::class);
+Route::apiResource(name:'listarProductos', controller: Equipos::class);
+Route::apiResource(name:'listarTipopgs', controller: Equipos::class);
 Route::apiResource(name:'listarJuego',controller: Juegos::class);
-Route::apiResource(name:'CosasMeta',controller: Juegos::class);
-Route::apiResource(name:'JuegosSimilares',controller: Juegos::class);
-Route::apiResource(name:'CantidadJugadores',controller: Juegos::class);
-Route::apiResource(name:'tendencias',controller: Categorias::class);
-Route::apiResource(name:'relevancia',controller: Categorias::class);
-Route::apiResource(name:'pjrandom',controller: Inscripcionis::class);
+Route::apiResource(name:'listarCategorias',controller: Categorias::class);
+Route::apiResource(name:'listarActividades',controller: Actividades::class);
 Route::apiResource(name:'listarParticipantes',controller: Participantes::class);

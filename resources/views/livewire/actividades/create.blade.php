@@ -11,20 +11,16 @@
            <div class="modal-body">
 				<form>
             <div class="form-group">
-                <label for="id_actividades"></label>
-                <input wire:model="id_actividades" type="text" class="form-control" id="id_actividades" placeholder="Id Actividades">@error('id_actividades') <span class="error text-danger">{{ $message }}</span> @enderror
-            </div>
-            <div class="form-group">
                 <label for="nombre"></label>
                 <input wire:model="nombre" type="text" class="form-control" id="nombre" placeholder="Nombre">@error('nombre') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
             <div class="form-group">
                 <label for="fecha"></label>
-                <input wire:model="fecha" type="text" class="form-control" id="fecha" placeholder="Fecha">@error('fecha') <span class="error text-danger">{{ $message }}</span> @enderror
+                <input wire:model="fecha" type="date" class="form-control" id="fecha" placeholder="Fecha">@error('fecha') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
             <div class="form-group">
                 <label for="hora"></label>
-                <input wire:model="hora" type="text" class="form-control" id="hora" placeholder="Hora">@error('hora') <span class="error text-danger">{{ $message }}</span> @enderror
+                <input wire:model="hora" type="time" class="form-control" id="hora" placeholder="Hora">@error('hora') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
             <div class="form-group">
                 <label for="lugar"></label>
