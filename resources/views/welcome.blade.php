@@ -1,43 +1,50 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" style="background-color: #240046">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>GamerFest</title>
 
-        <link rel="stylesheet" href="styles.css">
+        <link href="{{ asset('css/estilosHome.css') }}" rel="stylesheet">
+
     </head>
-    <body class="antialiased" style="font-family:'Nunito', sans-serif">
-
-    <header class="header" style="background-color: #ffb703; display: flex; align-items:center; heigth:85px; justify-content: flex-end; width: 100%;">
-        <h1 style="font-size: 35px; margin-right:auto; padding:0 20px;  ">GamerFest</h1>
-
-        <h2 style="size: 16px;  display: flex; margin: 20px"><a href="#" style="color: #000000; text-decoration: none">Juegos</a></h2>
-        <h2 style="size: 16px;  display: flex; margin: 20px"><a href="#" style="color: #000000; text-decoration: none">Galería</a></h2>
-        <h2 style="size: 16px;  display: flex; margin: 20px"><a href="#" style="color: #000000; text-decoration: none">Tienda</a></h2>
-        <h2 style="size: 16px;  display: flex; margin: 20px"><a href="#" style="color: #000000; text-decoration: none">Actividades</a></h2>
-
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/dashboard') }}" style="color: #000000; text-decoration: none" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
-                    @else
-                    <button style="font-size: 15px; background-color: #10002b; border-radius: 20px; padding: 10px; font-weight: bold;"> <a href="{{ route('login') }}" style="color: #ffffff; text-decoration: none; margin: 20px" class="text-sm text-gray-700 dark:text-gray-500 underline">Iniciar Sesión</a></button>
-
+    <body>
+        <header>
+            <h1>GAMER FEST</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Juegos</a></li>
+                    <li><a href="#">Galegría</a></li>
+                    <li><a href="#">Tienda</a></li>
+                    <li><a href="#">Actividades</a></li>
+                    <li class="access" style="background-color: #ffb703;">
+                            @if (Route::has('login'))
+                            <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                                @auth
+                                    <a href="{{ url('/dashboard') }}" style="color: #000000; text-decoration: none">Dashboard</a>
+                                @else
+                                <button > <a href="{{ route('login') }}" class="link">Iniciar Sesión</a></button>
+                                @endauth
+                                </div>
+                            @endif 
+                    </li>
+                    <li>
                         @if (Route::has('register'))
-                        <button style="font-size: 15px; background-color: #10002b; border-radius: 20px; padding: 10px; font-weight: bold;"> <a href="{{ route('register') }}" style="color: #ffffff; text-decoration: none; margin: 20px" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Registrarse</a></button>
+                        <button> <a href="{{ route('register') }}" class="link">Registrarse</a></button>
                         @endif
-                    @endauth
+                    </li>
+                </ul>
+               
+                <div class="hide">
+                    <i class="fa fa-bars" aria-hidden="true"></i> Menu
                 </div>
-            @endif
-        </div>
-    </header>
+            </nav>  
+        </header>
         <div>
             <h3 style="color:#ffffff; text-align:center; font-size: 50px">JUEGA, COMPITE, GANA</h3>
             <hr color="#ffb703" size="6px">
             <h1 style="color:#ffb703; text-align:center; font-size: 40px">Juegos Destacados</h1>
-            <img style="height: 250px; width: 400px; margin:1.5%" src="https://cdn.fansshare.com/image/supermariokart/mario-kart-double-dash-logo-wallpaper-super-mario-kart-1196751759.jpg">
+            <img style="height: 250px; width: 400px; margin:1.5%" src="../../marioKart.jpg" alt="mario">
             <img style="height: 250px; width: 400px; margin:1.5%" src="https://img.redbull.com/images/c_limit,w_1500,h_1000,f_auto,q_auto/redbullcom/2015/02/15/1331705372408_2/dota-22">
             <img style="height: 250px; width: 400px; margin:1.5%" src="https://img.redbull.com/images/c_limit,w_1500,h_1000,f_auto,q_auto/redbullcom/2022/8/1/ksfga6rlx2ugfhjd9vnk/league-of-legends">
             <img style="height: 250px; width: 400px; margin:1.5%" src="https://www.memuplay.com/blog/wp-content/uploads/2021/04/cj0.jpg">
@@ -75,5 +82,16 @@
 
 
         </div>
+        <hr color="#ffb703" size="6px">
+        <div style="text-align:center">
+        <h1 style="color:#ffb703; text-align:center; font-size: 40px">Juegos Destacados</h1>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.2120238450116!2d-78.58828638542768!3d-0.9988702992713577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d4639e3fb9755f%3A0x22fe7f63301b5fee!2sESPE%20-%20Campus%20Belisario%20Quevedo!5e0!3m2!1ses!2sec!4v1673007870391!5m2!1ses!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script>
+            $(".hide").on('click', function() {
+            $("nav ul").toggle('slow');
+            })
+        </script>
     </body>
 </html>

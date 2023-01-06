@@ -2,6 +2,11 @@
  * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
+
+ .antialiased{
+  background-color: #002752;
+}
+
 .fa,
 .fas,
 .far,
@@ -19,7 +24,8 @@
 .fa-lg {
   font-size: 1.33333em;
   line-height: 0.75em;
-  vertical-align: -.0667em; }
+  vertical-align: -.0667em; 
+}
 
 .fa-xs {
   font-size: .75em; }
@@ -13806,3 +13812,5 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
+
+
