@@ -40,7 +40,7 @@
             <h3 style="color:#ffffff; text-align:center; font-size: 50px">JUEGA, COMPITE, GANA</h3>
             <hr color="#ffb703" size="6px">
             <h1 ">Juegos Destacados</h1>
-            <img style="height: 250px; width: 400px; margin:1.5%" src="../../marioKart.jpg" alt="mario">
+            <img style="height: 250px; width: 400px; margin:1.5%" src="{{ asset('imagenes/marioKart.png') }}" alt="mario">
             <img style="height: 250px; width: 400px; margin:1.5%" src="https://img.redbull.com/images/c_limit,w_1500,h_1000,f_auto,q_auto/redbullcom/2015/02/15/1331705372408_2/dota-22">
             <img style="height: 250px; width: 400px; margin:1.5%" src="https://img.redbull.com/images/c_limit,w_1500,h_1000,f_auto,q_auto/redbullcom/2022/8/1/ksfga6rlx2ugfhjd9vnk/league-of-legends">
             <img style="height: 250px; width: 400px; margin:1.5%" src="https://www.memuplay.com/blog/wp-content/uploads/2021/04/cj0.jpg">
