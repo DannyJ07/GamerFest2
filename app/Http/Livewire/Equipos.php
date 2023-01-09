@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\Equipo;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class Equipos extends Component
 {
@@ -38,6 +39,7 @@ class Equipos extends Component
     public function store()
     {
         $this->validate([
+		'nombre' => 'required',
         ]);
 
         Equipo::create([ 
@@ -62,6 +64,7 @@ class Equipos extends Component
     public function update()
     {
         $this->validate([
+		'nombre' => 'required',
         ]);
 
         if ($this->selected_id) {
@@ -83,4 +86,19 @@ class Equipos extends Component
             $record->delete();
         }
     }
+
+    public function index1(){
+        $equipos= Equipo::all();
+        return view('pdf.index', compact('equipos'));
+    }
+
+
+    public function index()
+    {
+        $equipos = Equipo::all();
+        $pdf = PDF::loadView('pdf.download', compact('equipos'));
+        return $pdf->stream();
+    }
+
+
 }

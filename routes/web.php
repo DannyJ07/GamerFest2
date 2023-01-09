@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EquipoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,11 +13,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
     return view('welcome');
-});
+ });
 
+
+Route::get('download', [App\Http\Livewire\Equipos::class, 'index1'])->name('download-pdf');
+Route::get('download-pdf', [App\Http\Livewire\Equipos::class, 'index'])->name('download-pdf');
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

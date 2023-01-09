@@ -352,6 +352,11 @@ return [
             'icon' => 'fas fa-fw fa-gamepad',
         ],
         [
+            'text' => 'Reporte de Equipos',
+            'url'  => '/download',
+            'icon' => 'fas fa-fw fa-gamepad',
+        ],
+        [
             'text' => 'Productos',
             'url'  => '/productos',
             'icon' => 'fas fa-fw',
