@@ -39,13 +39,14 @@
         <div>
             <h3 style="color:#ffffff; text-align:center; font-size: 50px">JUEGA, COMPITE, GANA</h3>
             <hr color="#ffb703" size="6px">
-            <h1 ">Juegos Destacados</h1>
-            <img style="height: 250px; width: 400px; margin:1.5%" src="{{ asset('imagenes/marioKart.png') }}" alt="mario">
-            <img style="height: 250px; width: 400px; margin:1.5%" src="https://img.redbull.com/images/c_limit,w_1500,h_1000,f_auto,q_auto/redbullcom/2015/02/15/1331705372408_2/dota-22">
-            <img style="height: 250px; width: 400px; margin:1.5%" src="https://img.redbull.com/images/c_limit,w_1500,h_1000,f_auto,q_auto/redbullcom/2022/8/1/ksfga6rlx2ugfhjd9vnk/league-of-legends">
-            <img style="height: 250px; width: 400px; margin:1.5%" src="https://www.memuplay.com/blog/wp-content/uploads/2021/04/cj0.jpg">
-            <img style="height: 250px; width: 400px; margin:1.5%" src="https://as01.epimg.net/meristation/imagenes/2021/10/01/guias/1633081476_163721_1633081863_noticia_normal.jpg">
-            <img style="height: 250px; width: 400px; margin:1.5%" src="https://i.ytimg.com/vi/nPTUaEIdlOo/maxresdefault.jpg">
+            <h1>Juegos Destacados</h1>
+            <img style="height: 250px; width: 400px; margin:1.5%" src="{{ asset('imagenes/call.png') }}" alt="call">
+            <img style="height: 250px; width: 400px; margin:1.5%" src="{{ asset('imagenes/clash.png') }}" alt="clash">
+            <img style="height: 250px; width: 400px; margin:1.5%" src="{{ asset('imagenes/dota.png') }}" alt="dota">
+            <img style="height: 250px; width: 400px; margin:1.5%" src="{{ asset('imagenes/fifa.png') }}" alt="fifa">
+            <img style="height: 250px; width: 400px; margin:1.5%" src="{{ asset('imagenes/free.png') }}" alt="free">
+            <img style="height: 250px; width: 400px; margin:1.5%" src="{{ asset('imagenes/lol.png') }}" alt="lol">
+            <img style="height: 250px; width: 400px; margin:1.5%" src="{{ asset('imagenes/mario.png') }}" alt="mario">
         </div>
         <hr color="#ffb703" size="6px">
         <br>
