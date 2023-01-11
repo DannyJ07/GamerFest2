@@ -8,6 +8,7 @@ use App\Models\Inscripcioni;
 use App\Models\Juego;
 use App\Models\Participante;
 use App\Models\Tipopg;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class Inscripcionis extends Component
 {
@@ -139,6 +140,19 @@ class Inscripcionis extends Component
             $record = Inscripcioni::where('id', $id);
             $record->delete();
         }
+    }
+
+    public function reporte(){
+        $inscripcionis= Inscripcioni::all();
+        return view('pdfInscripIndi.index', compact('inscripcionis'));
+    }
+
+
+    public function pdfReporte()
+    {
+        $inscripcionis = Inscripcioni::all();
+        $pdf = PDF::loadView('pdfInscripIndi.download', compact('inscripcionis'));
+        return $pdf->stream();
     }
     
 }

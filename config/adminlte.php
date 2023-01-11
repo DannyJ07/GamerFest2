@@ -358,6 +358,18 @@ return [
                     'url'  => '/downloadJuego',
                     'icon' => 'fas fa-fw fa-edit',
                 ],
+                [
+                    'text' => 'Reporte de Actividades',
+                    'url'  => '/downloadActividade',
+                    'icon' => 'fas fa-fw fa-edit',
+                ],
+
+                [
+                    'text' => 'Reporte de Inscripciones Indi',
+                    'url'  => '/downloadInscripcioni',
+                    'icon' => 'fas fa-fw fa-edit',
+                ],
+
 
             ]
         ],

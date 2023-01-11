@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\Actividade;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class Actividades extends Component
 {
@@ -115,5 +116,18 @@ class Actividades extends Component
             $record = Actividade::where('id', $id);
             $record->delete();
         }
+    }
+
+    public function reporte(){
+        $actividades= Actividade::all();
+        return view('pdfActividades.index', compact('actividades'));
+    }
+
+
+    public function descargarReporte()
+    {
+        $actividades = Actividade::all();
+        $pdf = Pdf::loadView('pdfActividades.download', compact('actividades'));
+        return $pdf->stream();
     }
 }

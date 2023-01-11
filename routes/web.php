@@ -24,6 +24,14 @@ Route::get('downloadEquipo-pdf', [App\Http\Livewire\Equipos::class, 'index'])->n
 Route::get('downloadJuego', [App\Http\Livewire\Juegos::class, 'reporte'])->name('downloadJuego-pdf');
 Route::get('downloadJuego-pdf', [App\Http\Livewire\Juegos::class, 'pdfReporte'])->name('downloadJuego-pdf');
 
+//Rutas para los pdfs de Actividades
+Route::get('downloadActividade', [App\Http\Livewire\Actividades::class, 'reporte'])->name('downloadActividade-pdf');
+Route::get('downloadActividade-pdf', [App\Http\Livewire\Actividades::class, 'descargarReporte'])->name('downloadActividade-pdf');
+
+//Rutas para los pdfs de inscripciones Individuales
+Route::get('downloadInscripcioni', [App\Http\Livewire\Inscripcionis::class, 'reporte'])->name('downloadInscripcioni-pdf');
+Route::get('downloadInscripcioni-pdf', [App\Http\Livewire\Inscripcionis::class, 'pdfReporte'])->name('downloadInscripcioni-pdf');
+
 
 
 Route::middleware([
