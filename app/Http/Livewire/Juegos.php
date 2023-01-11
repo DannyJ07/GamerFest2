@@ -7,6 +7,7 @@ use Livewire\WithPagination;
 use App\Models\Juego;
 use App\Models\Categoria;
 use App\Models\Modo;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class Juegos extends Component
 {
@@ -144,4 +145,19 @@ class Juegos extends Component
             $record->delete();
         }
     }
+
+	public function reporte(){
+        $juegos= Juego::all();
+        return view('pdfJuego.index', compact('juegos'));
+    }
+
+
+    public function pdfReporte()
+    {
+        $juegos = Juego::all();
+        $pdf = PDF::loadView('pdfJuego.download', compact('juegos'));
+        return $pdf->stream();
+    }
+
+
 }

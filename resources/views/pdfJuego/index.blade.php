@@ -16,32 +16,44 @@
       <div class="container py-5">
           <div class="row">
               <div class="col-xl-12 text-right">
-                  <a href="{{ route('download-pdf') }}" class="btn btn-success btn-sm">Export to PDF</a>
+                  <a href="{{ route('downloadJuego-pdf') }}" class="btn btn-success btn-sm">Export to PDF</a>
               </div>
           </div>
 
           <div class="card mt-4">
               <div class="card-header">
-                    <h5 class="card-title font-weight-bold">Listado de equipos</h4>
+                    <h5 class="card-title font-weight-bold">Listado de juegos</h4>
               </div>
 
               <div class="card-body">
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th>Id</th>
-                                <th>Nombre</th>
+                            <th>Id</th>
+                            <th>Nombre</th>
+                            <th>Reglas</th>
+                            <th>Aula</th>
+                            <th>Valor</th>
+                            <th>Fecha</th>
+                            <th>Categoria</th>
+                            <th>Modo</th>
                             </tr>
                         </thead>
 
                         <tbody>
-                            @forelse ($equipos as $row)
-                                <tr>
-                                    <td>{{ $row->id }}</td>
-                                    <td>{{ $row->nombre }}</td>
-                                </tr>
+                            @forelse ($juegos as $row)
+                            <tr>
+                                <td>{{ $row->id }}</td>
+                                <td>{{ $row->nombre }}</td>
+                                <td>{{ $row->reglas }}</td>
+                                <td>{{ $row->aula }}</td>
+                                <td>{{ $row->valor }}</td>
+                                <td>{{ $row->fecha_evento }}</td>
+                                <td>{{ $row->categoria->tipo }}</td>
+                                <td>{{ $row->modo->tipo }}</td>
+                                
+                            </tr>
                             @empty
-
                             @endforelse
                         </tbody>
                     </table>

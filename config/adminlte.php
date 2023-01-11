@@ -345,15 +345,25 @@ return [
 
             ]
         ],
+        [
+            'text' => 'Reportes',
+            'submenu' => [
+                [
+                    'text' => 'Reporte de Equipos',
+                    'url'  => '/downloadEquipo',
+                    'icon' => 'fas fa-fw fa-edit',
+                ],
+                [
+                    'text' => 'Reporte de Juegos',
+                    'url'  => '/downloadJuego',
+                    'icon' => 'fas fa-fw fa-edit',
+                ],
 
+            ]
+        ],
         [
             'text' => 'Juegos',
             'url'  => '/juegos',
-            'icon' => 'fas fa-fw fa-gamepad',
-        ],
-        [
-            'text' => 'Reporte de Equipos',
-            'url'  => '/download',
             'icon' => 'fas fa-fw fa-gamepad',
         ],
         [

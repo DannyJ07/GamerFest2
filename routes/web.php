@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\EquipoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +16,16 @@ Route::get('/', function () {
     return view('welcome');
  });
 
+//Rutas para los pdfs de Equipo
+Route::get('downloadEquipo', [App\Http\Livewire\Equipos::class, 'index1'])->name('downloadEquipo-pdf');
+Route::get('downloadEquipo-pdf', [App\Http\Livewire\Equipos::class, 'index'])->name('downloadEquipo-pdf');
 
-Route::get('download', [App\Http\Livewire\Equipos::class, 'index1'])->name('download-pdf');
-Route::get('download-pdf', [App\Http\Livewire\Equipos::class, 'index'])->name('download-pdf');
+//Rutas para los pdfs de Juego
+Route::get('downloadJuego', [App\Http\Livewire\Juegos::class, 'reporte'])->name('downloadJuego-pdf');
+Route::get('downloadJuego-pdf', [App\Http\Livewire\Juegos::class, 'pdfReporte'])->name('downloadJuego-pdf');
+
+
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

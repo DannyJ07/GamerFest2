@@ -89,14 +89,14 @@ class Equipos extends Component
 
     public function index1(){
         $equipos= Equipo::all();
-        return view('pdf.index', compact('equipos'));
+        return view('pdfEquipo.index', compact('equipos'));
     }
 
 
     public function index()
     {
         $equipos = Equipo::all();
-        $pdf = PDF::loadView('pdf.download', compact('equipos'));
+        $pdf = PDF::loadView('pdfEquipo.download', compact('equipos'));
         return $pdf->stream();
     }
 
