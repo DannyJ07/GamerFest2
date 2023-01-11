@@ -32,6 +32,9 @@ Route::get('downloadActividade-pdf', [App\Http\Livewire\Actividades::class, 'des
 Route::get('downloadInscripcioni', [App\Http\Livewire\Inscripcionis::class, 'reporte'])->name('downloadInscripcioni-pdf');
 Route::get('downloadInscripcioni-pdf', [App\Http\Livewire\Inscripcionis::class, 'pdfReporte'])->name('downloadInscripcioni-pdf');
 
+//Rutas para los pdfs de Inscripciones Grupales
+Route::get('downloadInsGrup', [App\Http\Livewire\Inscripciongs::class, 'insGrup'])->name('downloadInsGrup-pdf');
+Route::get('downloadInsGrup-pdf', [App\Http\Livewire\Inscripciongs::class, 'pdfInsGrup'])->name('downloadInsGrup-pdf');
 
 
 Route::middleware([

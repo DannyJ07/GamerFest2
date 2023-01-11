@@ -370,6 +370,12 @@ return [
                     'icon' => 'fas fa-fw fa-edit',
                 ],
 
+                [
+                    'text' => 'Reporte de Ins. Grupales',
+                    'url'  => '/downloadInsGrup',
+                    'icon' => 'fas fa-fw fa-edit',
+                ],
+
 
             ]
         ],

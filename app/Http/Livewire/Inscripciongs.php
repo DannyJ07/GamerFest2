@@ -8,6 +8,7 @@ use App\Models\Inscripciong;
 use App\Models\Juego;
 use App\Models\Equipo;
 use App\Models\Tipopg;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class Inscripciongs extends Component
 {
@@ -137,5 +138,18 @@ class Inscripciongs extends Component
             $record = Inscripciong::where('id', $id);
             $record->delete();
         }
+    }
+
+    public function insGrup(){
+        $inscripciong= Inscripciong::all();
+        return view('pdfInsGrup.index', compact('inscripciong'));
+    }
+
+
+    public function pdfInsGrup()
+    {
+        $inscripciong = Inscripciong::all();
+        $pdf = PDF::loadView('pdfInsGrup.download', compact('inscripciong'));
+        return $pdf->stream();
     }
 }
